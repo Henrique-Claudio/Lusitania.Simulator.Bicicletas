@@ -1,0 +1,5 @@
+<asp:TableRow runat="server" SkinID="VoyagePanelHeader" CssClass="VoyageHeaderPanel">
+</asp:TableRow>
+
+<asp:TableRow runat="server" SkinID="VoyagePanelContent" CssClass="VoyageContentPanel">
+</asp:TableRow>

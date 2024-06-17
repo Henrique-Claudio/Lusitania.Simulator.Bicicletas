@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://LUSITANIA/WSLUSNET/Framework/Aplicacoes/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://LUSITANIA/WSLUSNET/Framework/Aplicacoes/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://LUSITANIA/WSLUSNET/Framework/Aplicacoes/">
+      <s:element name="obterValorSetting">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="prmCompanhiaConexao" type="s:short" />
+            <s:element minOccurs="0" maxOccurs="1" name="prmContexto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prmChave" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="obterValorSettingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="obterValorSettingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="obterValorSettingSoapIn">
+    <wsdl:part name="parameters" element="tns:obterValorSetting" />
+  </wsdl:message>
+  <wsdl:message name="obterValorSettingSoapOut">
+    <wsdl:part name="parameters" element="tns:obterValorSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="obterValorSettingHttpGetIn">
+    <wsdl:part name="prmCompanhiaConexao" type="s:string" />
+    <wsdl:part name="prmContexto" type="s:string" />
+    <wsdl:part name="prmChave" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obterValorSettingHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="obterValorSettingHttpPostIn">
+    <wsdl:part name="prmCompanhiaConexao" type="s:string" />
+    <wsdl:part name="prmContexto" type="s:string" />
+    <wsdl:part name="prmChave" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="obterValorSettingHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="ConfigSoap">
+    <wsdl:operation name="obterValorSetting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter valor de Setting.</wsdl:documentation>
+      <wsdl:input message="tns:obterValorSettingSoapIn" />
+      <wsdl:output message="tns:obterValorSettingSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ConfigHttpGet">
+    <wsdl:operation name="obterValorSetting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter valor de Setting.</wsdl:documentation>
+      <wsdl:input message="tns:obterValorSettingHttpGetIn" />
+      <wsdl:output message="tns:obterValorSettingHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ConfigHttpPost">
+    <wsdl:operation name="obterValorSetting">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Obter valor de Setting.</wsdl:documentation>
+      <wsdl:input message="tns:obterValorSettingHttpPostIn" />
+      <wsdl:output message="tns:obterValorSettingHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ConfigSoap" type="tns:ConfigSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obterValorSetting">
+      <soap:operation soapAction="http://LUSITANIA/WSLUSNET/Framework/Aplicacoes/obterValorSetting" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConfigSoap12" type="tns:ConfigSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="obterValorSetting">
+      <soap12:operation soapAction="http://LUSITANIA/WSLUSNET/Framework/Aplicacoes/obterValorSetting" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConfigHttpGet" type="tns:ConfigHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="obterValorSetting">
+      <http:operation location="/obterValorSetting" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ConfigHttpPost" type="tns:ConfigHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="obterValorSetting">
+      <http:operation location="/obterValorSetting" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Config">
+    <wsdl:port name="ConfigSoap" binding="tns:ConfigSoap">
+      <soap:address location="http://lusagq/WSLUSNET/Framework/Aplicacoes/Config.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConfigSoap12" binding="tns:ConfigSoap12">
+      <soap12:address location="http://lusagq/WSLUSNET/Framework/Aplicacoes/Config.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConfigHttpGet" binding="tns:ConfigHttpGet">
+      <http:address location="http://lusagq/WSLUSNET/Framework/Aplicacoes/Config.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ConfigHttpPost" binding="tns:ConfigHttpPost">
+      <http:address location="http://lusagq/WSLUSNET/Framework/Aplicacoes/Config.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

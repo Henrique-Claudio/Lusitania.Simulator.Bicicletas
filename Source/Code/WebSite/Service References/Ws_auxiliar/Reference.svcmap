@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d054e541-6952-4d88-b235-a649a2b2e85d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WSAuxiliar.wsdl" MetadataType="Wsdl" ID="e244c0db-a375-48e7-9d79-c8c705342ca3" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?wsdl" />
+    <MetadataFile FileName="WSAuxiliar3.xsd" MetadataType="Schema" ID="63bc364b-0bc2-4fbb-8b01-895a1ba56df6" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd1" />
+    <MetadataFile FileName="WSAuxiliar.xsd" MetadataType="Schema" ID="9b15c2b4-1f29-4252-92dc-48375d85709e" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd2" />
+    <MetadataFile FileName="WSAuxiliar.disco" MetadataType="Disco" ID="a2d897be-55a8-44f6-b041-b0abc70cfb73" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?disco" />
+    <MetadataFile FileName="WSAuxiliar1.xsd" MetadataType="Schema" ID="5ca17498-4e95-4811-9632-4465404da93b" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd3" />
+    <MetadataFile FileName="WSAuxiliar2.xsd" MetadataType="Schema" ID="aba9427b-c5ac-4953-b48e-1a920cc4c544" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd0" />
+    <MetadataFile FileName="WSAuxiliar4.xsd" MetadataType="Schema" ID="38a2bddb-b9ec-4f14-b86a-1afb1c6d48e3" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd5" />
+    <MetadataFile FileName="WSAuxiliar41.xsd" MetadataType="Schema" ID="58c7e861-60a5-47cd-ad46-94f8d8507907" SourceId="1" SourceUrl="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

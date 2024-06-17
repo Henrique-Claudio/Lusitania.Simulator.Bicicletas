@@ -1,0 +1,41 @@
+<asp:GridView runat="server" SkinID="Clean" GridLines="None" RowStyle-CssClass="CleanRow">
+    <HeaderStyle Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" ForeColor="Black" HorizontalAlign="Center" />
+    <FooterStyle HorizontalAlign="Center" />
+</asp:GridView>
+
+<asp:GridView runat="server" SkinID="CleanLooseHeight" GridLines="None" RowStyle-CssClass="CleanRowLooseHeight">
+    <HeaderStyle Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" ForeColor="Black" HorizontalAlign="Center" />
+    <FooterStyle HorizontalAlign="Center" />
+</asp:GridView>
+
+<asp:GridView runat="server" SkinID="CleanWithGridLines" GridLines="Both" RowStyle-CssClass="CleanRow" BorderColor="Black" BorderStyle="Solid" BorderWidth="1">
+    <HeaderStyle Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" ForeColor="Black" HorizontalAlign="Center" />
+</asp:GridView>
+
+<asp:GridView runat="server" SkinID="TravelAssistanceInfo" CssClass="TravelAssistanceInfoGridView" GridLines="None">
+    <HeaderStyle CssClass="TravelAssistanceInfoHeaderRow" />
+    <RowStyle CssClass="TravelAssistanceInfoRow" />
+</asp:GridView>
+
+<asp:GridView runat="Server" SkinID="SimulationResult" FooterStyle-Font-Bold="true" GridLines="None">
+    <HeaderStyle CssClass="SimulationResultHeaderRow" />
+    <RowStyle CssClass="SimulationResultItemRow" />
+</asp:GridView>
+
+<asp:GridView runat="server" SkinID="SelectableSearchResult" GridLines="none">
+    <HeaderStyle CssClass="GridViewHeaderRow" />
+    <RowStyle CssClass="GridViewRowSelectable" />
+    <PagerStyle CssClass="GridViewPager" HorizontalAlign="Center" />
+</asp:GridView>
+
+<asp:GridView runat="server" SkinID="Coverage" GridLines="None">
+    <RowStyle Font-Names="Verdana" Font-Size="8pt" Height="25px" />
+</asp:GridView>
+
+<asp:GridView runat="server" SkinID="ManagementSearchResult" Font-Names="Verdana" Font-Size="8pt" CellPadding="5" GridLines="None" AllowPaging="true" PageSize="10" AllowSorting="true">
+    <HeaderStyle BackColor="Navy" ForeColor="White" />
+    <RowStyle BackColor="WhiteSmoke" />
+    <AlternatingRowStyle BackColor="Gainsboro" />
+    <PagerSettings Mode="NumericFirstLast" Position="Bottom" />
+    <PagerStyle HorizontalAlign="Center" />
+</asp:GridView>

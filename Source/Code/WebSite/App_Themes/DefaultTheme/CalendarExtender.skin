@@ -1,0 +1,1 @@
+<ajax:CalendarExtender runat="server" CssClass="MyCalendar"></ajax:CalendarExtender>

@@ -1,0 +1,611 @@
+﻿body
+{
+    background-color: #fff;
+    margin: 0px;
+	font-size: 7.5pt;
+	font-family:  Verdana;
+	/*background-image: url(../images/body_bg.png);*/
+	background-repeat:repeat-x;
+}
+
+.botao
+{
+	font-family:  Verdana;
+}
+
+.texto
+{
+	font-size: 7.5pt;
+	font-family:  Verdana;
+}
+
+.txtLikeLabel
+{
+   background-color: #e1b4ae;
+   border: 0px;
+   text-align: right;
+   color: #000;
+}
+
+.txtNumber, .txtNumberfixed, .txtText, .txtDate
+{   
+    font-family: Verdana, Arial;
+    font-size:9pt;
+}
+
+.combo
+{
+	font-family: Verdana;
+    background-color: white;
+}
+
+.txtTextDisabled
+{
+	background-color: InactiveCaptionText;
+	font-family: Verdana;
+	border: 1px;
+	font-size:9pt;
+}
+
+
+.cboText
+{
+	font-size:9pt;
+    font-family: Verdana;
+}
+
+.cboTextDisabled
+{
+    font-family: Verdana;
+    height: 22px;
+    background-color: InactiveCaptionText;
+}
+
+.txtDate
+{
+  width: 80px;  
+}
+
+.txtNumber, .txtNumberfixed
+{
+    text-align: right;
+}
+
+.txtNumberfixed
+{
+    width: 96px;
+}
+
+.label
+{
+  height:13px;
+}
+
+.labelSmall
+{
+   font-size: 10px;
+   font-style: inherit;
+   font-weight: normal;
+}
+
+.labelCob
+{
+    font-size: 9pt;
+    color:#000;
+}
+
+.labelNumber
+{   
+    color:#000;
+    text-align: right;
+}
+
+.labelSelected
+{
+    font-weight: bold;
+    font-size: 9pt;
+    color:#000;
+}
+
+.labelNoSelected
+{    
+    font-size: 9pt;    
+    color: gray;
+}
+
+
+.tabInside TR
+{
+    height:26px;
+    border-bottom: 1px solid #EEE;
+    background: #F5c8c2;
+    
+}
+
+.tabInside TH
+{
+  background: #d75649;  
+  color: #fff;
+  text-align:left;
+  font-size: 9pt;
+  font-weight: bold;
+  height:20px;
+}
+
+.tabInside TABLE
+{
+ margin: 0; 
+ padding: 0; 
+ border-collapse: collapse; 
+}
+
+.tabInsideCacador
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #BD7B2A;
+}
+
+.tabInsideCacador TR
+{
+    height:26px;
+    background: #F2E4CC;
+}
+
+.tabInsideCacador TH
+{
+  border-bottom: solid 1px #BD7B2A;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+.tabInsideEmbRecreio
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #48888E;
+}
+
+.tabInsideEmbRecreio TR
+{
+    height:26px;
+    background: #B6CFD2;
+}
+
+.tabInsideEmbRecreio TH
+{
+  border-bottom: solid 1px #48888E;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+.trSeparadorEmbRecreio
+{
+  border-bottom: solid 1px #48888E;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+.tabInsideSaude
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #447584;
+}
+
+.tabInsideSaude TR
+{
+    height:26px;
+    background: #B5CACD;
+}
+
+.tabInsideSaude TH
+{
+  border-bottom: solid 1px #447584;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+.lblSaude
+{
+	font-size: 8pt;
+	font-weight: normal;
+}
+
+.tabInsideEmpDomestica
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #5B8673;
+}
+
+.tabInsideEmpDomestica TH
+{
+  border-bottom: solid 1px #5B8673;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+.tabInsideRendaFamiliar
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #746E74;
+}
+
+.tabInsideRendaFamiliar TH
+{
+  border-bottom: solid 1px #746E74;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+.tabInsideResidentia
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #746E74;
+}
+
+.tabInsideResidentia TH
+{
+  border-bottom: solid 1px #746E74;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+
+.tabInsideMotore
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #746E74;
+}
+
+.tabInsideMotore TH
+{
+  border-bottom: solid 1px #746E74;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+
+
+.tabInsideTrabIndep
+{
+ margin: 0; 
+ padding: 0; 
+ border: solid 1px #5B8673;
+}
+
+.tabInsideTrabIndep TH
+{
+  border-bottom: solid 1px #5B8673;
+  text-align:center;
+  font-size: 8pt;
+  font-weight: bold;
+  height:20px;
+}
+
+
+.CacadorBottomRight TD
+{
+	border-bottom: solid 1px #BD7B2A;
+	border-right: solid 1px #BD7B2A;
+}
+
+.CacadorBottomRight TH
+{
+	border-top: solid 1px #BD7B2A;
+	border-bottom: solid 1px #BD7B2A;
+	border-right: solid 1px #BD7B2A;
+}
+
+.CacadorBorder
+{
+	border-left: solid 1px #BD7B2A;
+	border-bottom: solid 1px #BD7B2A;
+}
+
+.SaudeBottomRight TD
+{
+	border-bottom: solid 1px #447584;
+	border-right: solid 1px #447584;
+}
+
+.SaudeBottomRight TH
+{
+	border-top: solid 1px #447584;
+	border-bottom: solid 1px #447584;
+	border-right: solid 1px #447584;
+}
+
+.SaudeBorder
+{
+	border-left: solid 1px #447584;
+	border-bottom: solid 1px #447584;
+}
+
+
+.SaudeBorderSeparadorLeft
+{
+	border-top: solid 2px #447584;
+	border-left: solid 1px #447584;
+	border-bottom: solid 1px #447584;
+}
+
+.SaudeBorderSeparador
+{
+	border-top: solid 2px #447584;
+}
+
+.listagem
+{
+	border: #dcdcdc 1px solid;
+	font-size: 9pt;
+	background-color: #f4fbed;
+	color: #003116;
+}
+
+.lstHeader
+{
+	background-color: #eef3e4;
+	color: #005136;
+	cursor: default;
+	font-weight: bold;
+}
+
+.lstLnItem
+{
+	color: #006600;
+	background-color: #ffffff;
+}
+
+.lstLnItem:hover
+{
+	background-color: Silver;
+}
+
+.lstLnAltItem
+{
+	color: #002200;
+	background-color: #f4fbed;
+}
+
+.lstLnAltItem:hover
+{
+	background-color: Silver;
+}
+
+/*
+estilos específicos dos simuladores
+*/
+.tabelaTituloMotore
+{
+    background-color: #FCB53F;
+    color: #01493B;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.tabelaMotore
+{
+    background-color: #FFFDFE;
+    color: black; 
+}
+
+.tabelaResidentia
+{
+    background-color: #DEBAB5;
+    color: black; 
+}
+
+.tabelaCacador
+{
+    background-color: #E5CA99;
+    color: black; 
+}
+
+.tabelaSaude
+{
+    background-color: #B5CACD;
+    color: black; 
+}
+
+.tabelaInfoSaude
+{
+    background-color: #E2EAEB;
+    color: black;
+    font-weight:bold;
+    border: solid 1px black;
+}
+
+.tabelaEmbRecreio
+{
+    background-color: #B6CFD2;
+    color: black; 
+}
+
+.tabelaEmpDomestica
+{
+    background-color: #BDCFC6;
+    color: black; 
+}
+
+.tabelaRendaFamiliar
+{
+    background-color: #C6C6CD;
+    color: black; 
+}
+
+.tabelaTrabIndep
+{
+    background-color: #D2C8B8;
+    color: black; 
+}
+
+.tabelaTituloResidentia
+{
+    background-color: #A64E4B;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.tabelaTituloCacador
+{
+    background-color: #BD7B2A;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.tabelaTituloSaude
+{
+    background-color: #447584;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.tabelaTituloEmbRecreio
+{
+    background-color: #48888E;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.tabelaTituloEmpDomestica
+{
+    background-color: #5B8673;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.tabelaTituloRendaFamiliar
+{
+    background-color: #746E74;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+.tabelaTituloTrabIndep
+{
+    background-color: #919063;
+    color: white;
+    font-size: 10pt;
+    font-weight: bold;
+    height: 22px;
+    padding-left: 5px;
+    vertical-align: middle;
+}
+
+.tdTituloCobertura
+{
+	color: #FFF;
+	font-weight:bold;
+	font-size:8pt;
+	background-color:#A6423A;
+	text-align:center;
+}
+
+.tblDescCobertura
+{
+	width: 100%;
+	height: 100%;
+	background-color:#DEB2B5;
+	font-size:9pt;
+}
+
+
+.tblFechar
+{
+	width: 100%;
+	height: 100%;
+	color:#A6423A;
+}
+
+.tblFechar td
+{
+	text-align: right;
+}
+
+.tblFechar a
+{
+	color:#A6423A;
+}
+
+.botao_green_small
+{
+     font-family:Arial;
+    font-size:13px;
+    padding:2px;
+    background:url("../images/bg_green.jpg") repeat-x scroll center top #000000;
+    border: none 0;
+    color:#FFFFFF;
+    cursor:pointer;
+    width:auto;
+    line-height:22px;
+    height:25px;
+    font-family:Arial;
+}
+
+.btn_green2
+{
+    background:#004F40 url(../images/btn_green.gif) top repeat-x;
+    font-size: 12px; 
+    border:1px solid black; 
+    color:#FFF; 
+    width:auto; 
+    padding: 3px 5px; 
+    display:inline-block; 
+    text-align: center; 
+    text-decoration:none; 
+    text-transform:uppercase; 
+    cursor:pointer;
+    font-weight:bold;
+}
+
+fieldset
+{
+   border: none 0;
+}

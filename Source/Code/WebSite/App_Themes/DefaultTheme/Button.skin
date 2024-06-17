@@ -1,0 +1,20 @@
+<asp:Button runat="server" SkinID="SimulateX2" CssClass="Button_green"/>
+
+<asp:Button runat="Server" SkinID="SimulateX3" CssClass="Button_green" />
+<asp:Button runat="Server" SkinID="SimulateX4" CssClass="Button_green_small" />
+
+<asp:Button runat="Server" SkinID="SimulateGrande" CssClass="Button_green_grande" />
+
+
+<asp:Button runat="server" SkinID="Print" CssClass="Button_black"/>
+
+<asp:Button runat="server" SkinID="Send" CssClass="Button_black"/>
+
+<asp:Button runat="server" SkinID="Proposal" CssClass="Button_black"/>
+
+<asp:Button runat="server" SkinID="Wide" CssClass="Button" Width="200px" />
+
+
+<asp:Button runat="server" SkinID="ButtonPropostas" CssClass="ButtonPropostas" />
+
+<asp:Button runat="server" SkinID="ButtonSimular" CssClass="ButtonSimular" />

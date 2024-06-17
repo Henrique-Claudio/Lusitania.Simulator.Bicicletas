@@ -1,0 +1,3 @@
+<asp:RadioButtonList runat="server" SkinID="Spaced" CssClass="RadioButtonListSpaced"></asp:RadioButtonList>
+
+<asp:RadioButtonList runat="server" SkinID="Centered" Style="margin-left: auto; margin-right:auto;"></asp:RadioButtonList>

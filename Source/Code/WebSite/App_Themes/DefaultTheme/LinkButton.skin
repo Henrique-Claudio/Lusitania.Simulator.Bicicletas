@@ -1,0 +1,5 @@
+<asp:LinkButton runat="server" CssClass="LinkButton">
+</asp:LinkButton>
+
+<asp:LinkButton runat="server" SkinID="UpDownButton" Height="10px">
+</asp:LinkButton>

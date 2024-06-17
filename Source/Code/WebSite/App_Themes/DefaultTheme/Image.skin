@@ -1,0 +1,41 @@
+<asp:Image runat="server" SkinID="PanelHeader" ImageAlign="AbsMiddle" CssClass="PanelHeaderImage" ImageUrl="~/Images/hide.gif" />
+
+<asp:Image runat="server" SkinID="PanelHeaderSec" ImageAlign="AbsMiddle" CssClass="PanelHeaderImageSec" ImageUrl="~/Images/hide.gif" />
+
+<asp:Image runat="server" SkinID="OptionTrue" ImageUrl="~/Images/Record_16x16.png" />
+
+<asp:Image runat="Server" SkinID="OptionEmpty" ImageUrl="~/Images/EmptyRecord_16x16.png" />
+
+<asp:Image runat="server" SkinID="WorkAccidentsHeader" ImageUrl="~/Images/WorkAccidentsHeader_762x44.gif" />
+
+<asp:Image runat="server" SkinID="LeisureCraftHeader" ImageUrl="~/Images/PersonalCraftHeader_768x44.gif" />
+
+<asp:Image runat="server" SkinID="BicicletasHeader" ImageUrl="~/Images/banner_topo_Bicicletas.jpg" />
+
+<asp:Image runat="server" SkinID="HunterHeader" ImageUrl="~/Images/Cacador_topo.gif" />
+
+<asp:Image runat="server" SkinID="Wait" ImageUrl="~/Images/StatusAnimation.gif" />
+
+<asp:Image runat="server" SkinID="FamilyPlanHeader" ImageUrl="~/Images/FamilyPlanHeader.gif" />
+
+<asp:Image runat="server" SkinID="PersonalAccidentsHeader" ImageUrl="~/Images/PersonalAccidentsPageHeader.gif" />
+
+<asp:Image runat="server" SkinID="HomeHeader" ImageUrl="~/Images/HomeSimulator-Logo-Common.gif" />
+
+<asp:Image runat="Server" SkinID="ManagementHeader" ImageUrl="~/Images/ManagementHeaderLogo.gif" />
+
+<asp:Image runat="Server" SkinID="HealthHeader" ImageUrl="~/Images/HealthSimulator-CommonHeader.gif" />
+
+<asp:Image runat="server" SkinID="User" ImageUrl="~/Images/User.png" />
+
+<asp:Image runat="server" SkinID="AddGeneric" ImageUrl="~/Images/Add_16x16.png" />
+
+<asp:Image runat="server" SkinID="Delete" ImageUrl="~/Images/Delete_16x16.png" />
+
+<asp:Image runat="server" SkinID="Help" ImageUrl="~/Images/Help_17x17.png" />
+
+<asp:Image runat="Server" SkinID="NoContract" ImageUrl="~/Images/Organizer_16x16_Cross.png" />
+
+<asp:Image runat="Server" SkinID="Acceptance" ImageUrl="~/Images/Warning_16x16.png" />
+
+<asp:Image runat="Server" SkinID="AddItem" ImageUrl="~/Images/AddLine.gif" />

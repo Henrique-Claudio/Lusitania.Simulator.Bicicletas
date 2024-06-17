@@ -1,0 +1,3 @@
+<ajax:ModalPopupExtender runat="server" BackgroundCssClass="ModalBackGround" DropShadow="false"></ajax:ModalPopupExtender>
+
+<ajax:ModalPopupExtender runat="server" SkinID="modal1"  BackgroundCssClass="ModalBackGround" DropShadow="false"></ajax:ModalPopupExtender>

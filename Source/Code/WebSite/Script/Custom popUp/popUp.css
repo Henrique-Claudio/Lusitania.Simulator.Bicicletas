@@ -1,0 +1,273 @@
+
+.ui-infoBox
+{
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 35000;
+}
+.ui-infoBox-Wrapper, .ui-ShowBox-Wrapper, .ui-ShowBox-Alert
+{
+    height: auto !important;
+    background-color: White;
+    z-index: 25444;
+    border: solid 1px #FFAD33;
+    padding: 5px;
+    position: fixed;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=0,strength=3), progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=45,strength=3), progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=90,strength=3), progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=135,strength=3), progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=180,strength=3), progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=225,strength=3), progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=270,strength=3), progid:DXImageTransform.Microsoft.Shadow(color=#ccccccc,direction=315,strength=3) progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#eeeeee);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    -o-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+.ui-infoBox-Wrapper
+{
+    overflow:hidden;
+    padding-bottom: 20px;
+}
+.ui-ShowBox-Wrapper
+{
+    position: relative;
+    margin: 0 20%;
+    top: 25%;
+}
+
+.ui-ShowBox-Body, .ui-infoBox-Body
+{
+    padding: 5px;
+}
+
+.ui-infoBox-Body
+{
+    position:relative;    
+    max-height: 500px;
+    padding: 0 10px;
+}
+.ui-infoBox-Header
+{
+    height: 30px;
+    line-height: 30px;
+}
+.ui-infoBox-Header a
+{
+    float: right;
+    cursor: pointer;
+}
+.ui-infoBox-Header h4
+{
+    text-align: center;
+    text-transform: uppercase;
+    width: 85%;
+}
+
+.ui-infoBox-Body.topShadow
+{
+    -webkit-box-shadow: inset 0px 48px 10px -51px rgba(0,0,0,0.7);
+    -moz-box-shadow: inset 0px 48px 10px -51px rgba(0,0,0,0.7);
+    box-shadow: inset 0px 48px 10px -51px rgba(0,0,0,0.7);
+}
+.ui-infoBox-hidden
+{
+    display: none;
+}
+.ui-infoBox-loader-img
+{
+    position: relative;
+    margin: 0 auto;
+    height: 22px;
+    width: 22px;
+    float: left;
+    clear: left;
+    border: none;
+}
+.ui-infoBox-loader-span
+{
+    font-size:11px;
+    color:#000;
+    line-height: 20px;
+    margin: 10px;
+}
+.ui-infoBox-loader
+{    
+    z-index: 444;    
+    position: relative;
+    margin: 0 auto;
+    top: 35%;
+    padding: 8px 5px 0;
+    background-color:#FFF;
+    width:175px;
+    height: 30px;
+    border: solid 1px #000;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);    
+}
+
+.ui-infoBox-overlay
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 5-7 */
+    filter: alpha(opacity=50); /* Netscape */
+    -moz-opacity: 0.5; /* Safari 1.x */
+    -khtml-opacity: 0.5; /* Good browsers */
+    opacity: 0.5;
+    background-color: #444;
+}
+.ui-infoBox-close
+{
+    background-color: #FCD88E;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;    
+    line-height: 16px;    
+    margin: 0;
+    padding: 0 4px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.ui-infoBox-close:hover
+{
+    color: #FFFFFF;
+    background-color: #E29E2F;
+}
+
+/************** Alert ***************************/
+.ui-ShowBox-Alert
+{
+    position: relative;
+    margin: 0 auto;
+    width: 750px;
+}
+.ui-ShowBox-Alert .ui-infoBox-alert-header
+{
+    height: 24px;
+}
+.ui-ShowBox-Alert .ui-infoBox-alert-body
+{
+    padding:15px 5px 15px 25px;
+    margin:0;
+    text-align:left;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+.ui-ShowBox-Alert .ui-infoBox-alert-footer
+{
+    height: 28px;
+}
+.ui-infoBox-button
+{
+    background-color: #2D7544;    
+    color: #FFFFFF;
+    float: right;
+    line-height: 20px;   
+    font-family: 'Open Sans Condensed', sans-serif;
+    border-radius: 2px;
+    font-size:12px;
+    padding: 2px 30px;
+    position: relative;
+    cursor:pointer;    
+    text-decoration:none;
+}
+.ui-infoBox-button:hover
+{
+    background-color: #377E4E;     
+    color:#fff;
+}
+.link
+{
+    background-color: transparent;    
+    color: #2D7544;
+    text-decoration:underline;
+}
+
+
+.link:hover{color: #000;    background-color: transparent;}
+
+.ui-ShowBox-Alert div.infoHeader, .ui-ShowBox-Alert div.erroHeader, .ui-ShowBox-Alert div.alertHeader
+{
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 30px;
+    height:22px
+}
+.ui-ShowBox-Alert .infoHeader span, .ui-ShowBox-Alert .erroHeader span, .ui-ShowBox-Alert .alertHeader span
+{    
+    color: #FFFFFF;
+    font-family: times new roman;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 22px;
+    margin: 0;
+    padding: 0 11px;
+}
+.ui-ShowBox-Alert h3
+{
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0 0 0 30px;
+    padding-left: 20px;
+    background-color: white;
+    color: #333;
+    text-align: left;
+    font-family: arial,sans-serif;
+    text-transform: capitalize;
+}
+.ui-ShowBox-Alert .infoHeader 
+{
+    border: 1px solid blue;    
+}
+.ui-ShowBox-Alert .erroHeader 
+{
+    border: 1px solid red;
+}
+.ui-ShowBox-Alert .alertHeader
+{
+    border: 1px solid #E39F32;
+}
+.ui-ShowBox-Alert div.infoHeader 
+{    
+    background-color: Blue;
+}
+.ui-ShowBox-Alert div.erroHeader 
+{
+    background-color: Red;
+}
+.ui-ShowBox-Alert div.alertHeader
+{
+    background-color: #E39F32;
+}
+
+.opacity0
+{
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=10)"; /* IE 5-7 */
+    filter: alpha(opacity=10); /* Netscape */
+    -moz-opacity: 0.1; /* Safari 1.x */
+    -khtml-opacity: 0.1; /* Good browsers */
+    opacity: 0.1;
+}
+
+
+/*
+ToolTipInfo
+*/
+.ToolTipInfo
+{
+    margin:8px;
+	padding:10px;
+	border:1px solid #FFA000;
+	background-color:#fff;
+	font-size:11px;
+	position: absolute;
+	z-index: 9999;		
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+    
+}

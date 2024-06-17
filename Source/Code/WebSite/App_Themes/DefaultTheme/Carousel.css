@@ -1,0 +1,67 @@
+#carousel
+{
+	width: 700px;
+	height: 150px;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -350px;
+}
+#carousel a
+{
+	position: absolute;
+	width: 110px;
+}
+/*
+#ImageBoxOverlay
+{
+	background-color: #000;
+	z-index: 1000;
+}
+#ImageBoxOuterContainer{
+	z-index: 1000;
+}
+#ImageBoxCaption
+{
+	background-color: #F4F4EC;
+}
+#ImageBoxContainer
+{
+	width: 250px;
+	height: 250px;
+	background-color: #F4F4EC;
+}
+#ImageBoxCaptionText
+{
+	font-weight: bold;
+	padding-bottom: 5px;
+	font-size: 13px;
+	color: #000;
+}
+#ImageBoxCaptionImages
+{
+	margin: 0;
+}
+#ImageBoxNextImage
+{
+	background-image: url(App_Themes/DefaultTheme/Images/CarouselNext.png);
+	background-color: transparent;
+}
+#ImageBoxPrevImage
+{
+	background-image: url(App_Themes/DefaultTheme/Images/CarouselPrevious.png);
+	background-color: transparent;
+}
+#ImageBoxNextImage:hover
+{
+	background-image: url(App_Themes/DefaultTheme/Images/CarouselNextHover.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#ImageBoxPrevImage:hover
+{
+	background-image: url(App_Themes/DefaultTheme/Images/CarouselPreviousHover.png);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+*/

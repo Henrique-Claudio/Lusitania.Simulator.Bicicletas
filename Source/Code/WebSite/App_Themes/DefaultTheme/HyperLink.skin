@@ -1,0 +1,19 @@
+<asp:HyperLink runat="Server" SkinID="AddItem" ImageUrl="~/Images/AddLine.gif"></asp:HyperLink>
+
+<asp:HyperLink runat="server" SkinID="Help" ImageUrl="~/Images/Help_17x17.png"></asp:HyperLink>
+
+<asp:HyperLink runat="Server" SkinID="ShowDetail" ImageUrl="~/Images/Help_17x17.png"></asp:HyperLink>
+
+<asp:HyperLink runat="server" SkinID="Calendar" ImageUrl="~/Images/Calendar_16x16.png"></asp:HyperLink>
+
+<asp:HyperLink runat="Server" SkinID="User" ImageUrl="~/Images/User.png"></asp:HyperLink>
+
+<asp:HyperLink runat="server" SkinID="FamilyPlanUser" ImageUrl="~/Images/User_48x48.png"></asp:HyperLink>
+
+<asp:HyperLink runat="server" SkinID="AddPolicy" ImageUrl="~/Images/AutoList_48x48.png"></asp:HyperLink>
+
+<asp:HyperLink runat="server" SkinID="NewPlan" ImageUrl="~/Images/Document_16x16.png"></asp:HyperLink>
+
+<asp:HyperLink runat="server" SkinID="Text" Font-Bold="true" ForeColor="Black"></asp:HyperLink>
+
+<asp:HyperLink runat="server" SkinID="Header" Font-Bold="true" ForeColor="White"></asp:HyperLink>

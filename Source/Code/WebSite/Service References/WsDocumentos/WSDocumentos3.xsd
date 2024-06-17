@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Portais.PortalMediador.Documentos" />
+  <xs:element name="obterListasSegundasVias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="Ramo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Apolice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NIF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Recibo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApoliceExtracto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReciboExtracto" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterListasSegundasViasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Lusitania.Model.Portais.PortalMediador.Documentos" minOccurs="0" name="obterListasSegundasViasResult" nillable="true" type="q1:ArrayOfMlSegundaVia" />
+        <xs:element minOccurs="0" name="MensagemErro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TemErro" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentoPorWorkspace">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="Workspace" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentoPorWorkspaceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obterDocumentoPorWorkspaceResult" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="Erro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentoApolicePorDocId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="Ramo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Apolice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DocId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentoApolicePorDocIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obterDocumentoApolicePorDocIdResult" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="Erro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentoSinistroPorDocId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="Ramo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modalidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Submodalidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ano" type="xs:short" />
+        <xs:element minOccurs="0" name="Sinistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DocId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentoSinistroPorDocIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obterDocumentoSinistroPorDocIdResult" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="Erro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentacaoProcesso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NomeModelo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DirectorioFicheirosActivos" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DirectorioFicheirosRevogados" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterDocumentacaoProcessoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="obterDocumentacaoProcessoResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="indexarDocumentoApolice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="Ramo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Apolice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CentroCusto" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DataDocumento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="DataRegisto" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NomeFicheiro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ConteudoFicheiro" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="NumeroTentativas" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="indexarDocumentoApoliceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="indexarDocumentoApoliceResult" type="xs:long" />
+        <xs:element minOccurs="0" name="MensagemErro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TemErro" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaDocumentos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CompanhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="Tipo_Doc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ramo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Modalidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Submodalidade" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Apolice" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Ano" type="xs:short" />
+        <xs:element minOccurs="0" name="Sinistro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Pessoa" type="xs:int" />
+        <xs:element minOccurs="0" name="DocId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaDocumentosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="erro" type="xs:int" />
+        <xs:element minOccurs="0" name="msg" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insereOutputDocUploadOnlineGuidDoc">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="prmGuidDoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmTipodoc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="prmFicheiro" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insereOutputDocUploadOnlineGuidDocResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insereOutputDocUploadOnlineXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="companhiaConexao" type="xs:short" />
+        <xs:element minOccurs="0" name="prmXmlDoc" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmTipodoc" type="xs:decimal" />
+        <xs:element minOccurs="0" name="prmFicheiro" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insereOutputDocUploadOnlineXMLResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

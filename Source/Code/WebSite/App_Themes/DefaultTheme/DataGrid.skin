@@ -1,0 +1,4 @@
+<asp:DataGrid runat="server" SkinID="Clean" GridLines="None">
+    <HeaderStyle Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" HorizontalAlign="Center" />
+    <ItemStyle HorizontalAlign="Center" />
+</asp:DataGrid>

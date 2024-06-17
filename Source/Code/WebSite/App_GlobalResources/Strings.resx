@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChildrenProtectionSimulator_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro Protecção Criança.pdf</value>
+  </data>
+  <data name="Condominium_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro de Condomínio.pdf</value>
+  </data>
+  <data name="Condominium_SelectAtLeastOneScope" xml:space="preserve">
+    <value>A cobertura Edíficio é obrigatória.</value>
+  </data>
+  <data name="ContractSavedOK" xml:space="preserve">
+    <value>O Contrato foi emitido com sucesso.</value>
+  </data>
+  <data name="DriverLicenseDateIsTooSoon" xml:space="preserve">
+    <value>A Data da Carta de Condução é anterior à Data de Maioridade.</value>
+  </data>
+  <data name="FamilyPlan_AllContractsSavedSuccessfully" xml:space="preserve">
+    <value>Todos os contratos foram gravados com sucesso.</value>
+  </data>
+  <data name="FamilyPlan_CannotAddMoreCarSimulations" xml:space="preserve">
+    <value>Não é possível adicionar mais nenhum seguro automóvel.</value>
+  </data>
+  <data name="FamilyPlan_CannotAddMoreHealthSimulations" xml:space="preserve">
+    <value>Não é possível adicionar mais nenhum seguro de saúde.</value>
+  </data>
+  <data name="FamilyPlan_ConfirmAllActionsBeforeContract" xml:space="preserve">
+    <value>Confirme todas as acções antes de emitir os contratos.</value>
+  </data>
+  <data name="FamilyPlan_CouldNotCreateFamilyPlan" xml:space="preserve">
+    <value>Não foi possível inicializar o Plano de Família.</value>
+  </data>
+  <data name="FamilyPlan_NoPolicyIsSelectedToAdd" xml:space="preserve">
+    <value>Seleccione pelo menos uma apólice antes de adicioná-las ao Plano.</value>
+  </data>
+  <data name="FamilyPlan_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Plano Família.pdf</value>
+  </data>
+  <data name="FamilyPlan_ThePolicyWasAddedToThePlan" xml:space="preserve">
+    <value>A apólice seleccionada foi adicionada ao plano com sucesso.</value>
+  </data>
+  <data name="FamilyPlan_UserHas_X_PreviousPlans" xml:space="preserve">
+    <value>Os dados do Tomador de Seguro foram gravados com sucesso.
+Atenção, o Tomador de Seguro já tem {0} Planos Família Lusitania.
+Pode prosseguir a Simulação até à Folha de Adesão.
+Para efectivar o contrato contacte o seu Técnico Comercial.</value>
+  </data>
+  <data name="FamilyPlan_X_PolicesWereAddedToThePlan_FormatString" xml:space="preserve">
+    <value>As {0} apólices seleccionadas foram adicionadas ao Plano com sucesso.</value>
+  </data>
+  <data name="FamilyPlanSimulator_HolderInfoNeeded" xml:space="preserve">
+    <value>Preencha os dados do tomador para iniciar o Plano Família.</value>
+  </data>
+  <data name="FamilyRent_QuotationSubjectText" xml:space="preserve">
+    <value>Simulação RENDA FAMILIAR Lusitania</value>
+  </data>
+  <data name="FamilyRent_SelectAtLeastHolderOrSpouse" xml:space="preserve">
+    <value>Seleccione uma opção para o Tomador ou para o Cônjuge.</value>
+  </data>
+  <data name="FamilyRent_SelectIfHolderHasLegalHeirs" xml:space="preserve">
+    <value>Indique se o Titular tem Herdeiros Legais.</value>
+  </data>
+  <data name="FamilyRent_SelectIfSpouseHasLegalHeirs" xml:space="preserve">
+    <value>Indique se o Cônjuge tem Herdeiros Legais.</value>
+  </data>
+  <data name="FamilyRent_SpouseNifIsEqualToHolderNif" xml:space="preserve">
+    <value>O NIF do Cônjuge é igual ao do Tomador.</value>
+  </data>
+  <data name="FiscalNumberIsNotValid" xml:space="preserve">
+    <value>O NIF indicado não é válido.</value>
+  </data>
+  <data name="Gender_Female" xml:space="preserve">
+    <value>Feminino</value>
+  </data>
+  <data name="Gender_Female_Abreviation" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="Gender_Male" xml:space="preserve">
+    <value>Masculino</value>
+  </data>
+  <data name="Gender_Male_Abreviation" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="Health_FamilyMember_Holder" xml:space="preserve">
+    <value>Titular</value>
+  </data>
+  <data name="Health_FamilyMember_Kid" xml:space="preserve">
+    <value>Filho</value>
+  </data>
+  <data name="Health_FamilyMember_Other" xml:space="preserve">
+    <value>Outro</value>
+  </data>
+  <data name="Health_FamilyMember_Spouse" xml:space="preserve">
+    <value>Cônjuge</value>
+  </data>
+  <data name="Health_ShowPlanInfo" xml:space="preserve">
+    <value>Informações do Plano</value>
+  </data>
+  <data name="HealthProduct_Dentaria" xml:space="preserve">
+    <value>Dentaria</value>
+  </data>
+  <data name="HealthProduct_Livre" xml:space="preserve">
+    <value>Livre</value>
+  </data>
+  <data name="HealthProduct_Pleno" xml:space="preserve">
+    <value>Pleno</value>
+  </data>
+  <data name="HealthProduct_Senior" xml:space="preserve">
+    <value>Senior</value>
+  </data>
+  <data name="HealthSimulator_Kid" xml:space="preserve">
+    <value>Filho</value>
+  </data>
+  <data name="HealthSimulator_NumberOfPeople_One" xml:space="preserve">
+    <value>Uma Pessoa</value>
+  </data>
+  <data name="HealthSimulator_NumberOfPeople_ThreeOrMore_FormatString" xml:space="preserve">
+    <value>{0} Pessoas</value>
+  </data>
+  <data name="HealthSimulator_NumberOfPeople_Two" xml:space="preserve">
+    <value>Duas Pessoas</value>
+  </data>
+  <data name="HealthSimulator_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro de Saúde.pdf</value>
+  </data>
+  <data name="HealthSimulator_Spouse" xml:space="preserve">
+    <value>Cônjuge</value>
+  </data>
+  <data name="Home_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro Multiriscos Habitação.pdf</value>
+  </data>
+  <data name="Home_TotalValueOf_X_IsNotValid" xml:space="preserve">
+    <value>O valor total de {0} não é válido.</value>
+  </data>
+  <data name="HomeSimulator_QuotationEmailSubject_FormatString" xml:space="preserve">
+    <value>Simulação Multiriscos Habitação Lusitania</value>
+  </data>
+  <data name="Housemaid_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro de Empregada Doméstica.pdf</value>
+  </data>
+  <data name="IndependantWorker_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro de Trabalhador Independente.pdf</value>
+  </data>
+  <data name="IndependantWorker_QuotationSubjectText" xml:space="preserve">
+    <value>Simulação TRABALHADOR INDEPENDENTE Lusitania</value>
+  </data>
+  <data name="LeisureCraft_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro de Embarcações de Recreio.pdf</value>
+  </data>
+  <data name="LeisureCraft_QuotationSubjectText" xml:space="preserve">
+    <value>Simulação EMBARCAÇÕES DE RECREIO Lusitania</value>
+  </data>
+  <data name="LeisureCraftProposal_CannotDoNewInsuranceWithUnpaidOldInsurance" xml:space="preserve">
+    <value>Não é possível efectuar o seguro com débitos por liquidar. Por favor, contacte o seu técnico comercial.</value>
+  </data>
+  <data name="LeisureCraftSimulator_NifIsRequiredForProposal" xml:space="preserve">
+    <value>Para iniciar a proposta, deve indicar o NIF do Tomador.</value>
+  </data>
+  <data name="Menu_ClearCache" xml:space="preserve">
+    <value>Limpar o Cache</value>
+  </data>
+  <data name="Menu_TheCacheWasCleared" xml:space="preserve">
+    <value>O Cache foi limpo.</value>
+  </data>
+  <data name="NoContract_FamilyPlan" xml:space="preserve">
+    <value>Este registo está associado a um Plano Familia pelo que não pode passar a contrato por este ecrã</value>
+  </data>
+  <data name="NoContract_Over30days" xml:space="preserve">
+    <value>Já passaram mais de 30 dias da data de simulação pelo que este registo não pode passar a contrato</value>
+  </data>
+  <data name="NotAvailable_ShortHand" xml:space="preserve">
+    <value>N.A.</value>
+  </data>
+  <data name="PersonalAccidents_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro de Renda Familiar.pdf</value>
+  </data>
+  <data name="PersonInfo_SelectAnEnterpriseClient" xml:space="preserve">
+    <value>Seleccione um Cliente</value>
+  </data>
+  <data name="PersonSearch_NoPersonFound" xml:space="preserve">
+    <value>Não foi encontrada informação relativa à sua pesquisa.</value>
+  </data>
+  <data name="Proposal_ProposalCreatedOK" xml:space="preserve">
+    <value>A Proposta foi gravada com sucesso.</value>
+  </data>
+  <data name="Proposal_ProposalSentForAcceptance" xml:space="preserve">
+    <value>A proposta terá de ser enviada para aprovação</value>
+  </data>
+  <data name="ProposalHasChangedMustSaveItAgain" xml:space="preserve">
+    <value>A proposta foi alterada. Terá de gravá-la para passar a contrato.</value>
+  </data>
+  <data name="ProposalIsDirty" xml:space="preserve">
+    <value>A proposta foi alterada, terá de guardá-la antes de prosseguir.</value>
+  </data>
+  <data name="QuotationSentSuccessfully" xml:space="preserve">
+    <value>A Cotação foi enviada com sucesso.</value>
+  </data>
+  <data name="Receipt_Title_Home" xml:space="preserve">
+    <value>Multi-Riscos
+Habitação</value>
+  </data>
+  <data name="Receipt_Title_Housemaid" xml:space="preserve">
+    <value>Empregada
+Doméstica</value>
+  </data>
+  <data name="Receipt_Title_LeisureCraft" xml:space="preserve">
+    <value>Embarcações
+Recreio</value>
+  </data>
+  <data name="SendQuotation_Body_FormatString" xml:space="preserve">
+    <value>###TO###,
+
+###FROM-NAME### [###FROM-EMAIL###] enviou-lhe a simulação de seguro em anexo.
+
+###MESSAGE###</value>
+  </data>
+  <data name="SendQuotation_From_Name" xml:space="preserve">
+    <value>Lusitania</value>
+  </data>
+  <data name="SendSuggestion_Subject_FormatString" xml:space="preserve">
+    <value>Dúvidas ou Sugestões - Simulador {0}</value>
+  </data>
+  <data name="SendSuggestion_Success" xml:space="preserve">
+    <value>A sua mensagem foi enviada com sucesso. Obrigado pela sua participação.</value>
+  </data>
+  <data name="SendSuggestion_Title_FormatString" xml:space="preserve">
+    <value>Envie-nos as suas dúvidas ou sugestões sobre o simulador {0}:</value>
+  </data>
+  <data name="Simulator_ConfirmPrint" xml:space="preserve">
+    <value>Os seus dados pessoais ainda não estão preenchidos. Deseja imprimir mesmo assim?</value>
+  </data>
+  <data name="Simulator_NifIsRequiredForProposal" xml:space="preserve">
+    <value>Para iniciar a proposta, deve indicar o NIF do Tomador.</value>
+  </data>
+  <data name="TravelSimulator_ConfirmPrint" xml:space="preserve">
+    <value>Os seus dados pessoais ainda não estão preenchidos. Deseja continuar mesmo assim?</value>
+  </data>
+  <data name="TravelSimulator_DurationFormatString_Plural" xml:space="preserve">
+    <value>{0} dias</value>
+  </data>
+  <data name="TravelSimulator_DurationFormatString_Singular" xml:space="preserve">
+    <value>{0} dia</value>
+  </data>
+  <data name="TravelSimulator_NoLuggage" xml:space="preserve">
+    <value>Sem Bagagem</value>
+  </data>
+  <data name="TravelSimulator_PlanInfo_Coverage" xml:space="preserve">
+    <value>Cobertura</value>
+  </data>
+  <data name="TravelSimulator_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro de Viagem.pdf</value>
+  </data>
+  <data name="TravelSimulator_TravelAssistance_Included" xml:space="preserve">
+    <value>Incluída</value>
+  </data>
+  <data name="TravelSimulator_TravelAssistance_NotIncluded" xml:space="preserve">
+    <value>Não Incluída</value>
+  </data>
+  <data name="TravelSimulator_TravelAssistanceInfo_CoverageNameHeader" xml:space="preserve">
+    <value>Cobertura</value>
+  </data>
+  <data name="TravelSimulator_TravelAssistanceInfo_NoValue" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="TravelSimulator_TravelAssistanceInfo_UnlimitedValue" xml:space="preserve">
+    <value>Ilimitado</value>
+  </data>
+  <data name="Voyage_NoValue" xml:space="preserve">
+    <value>-</value>
+  </data>
+  <data name="Voyage_Unlimited" xml:space="preserve">
+    <value>Ilimitado</value>
+  </data>
+  <data name="WorkAccidentsProposal_CannotDoNewInsuranceWithUnpaidOldInsurance" xml:space="preserve">
+    <value>Não é possível efectuar o seguro com débitos por liquidar. Por favor, contacte o seu técnico comercial.</value>
+  </data>
+  <data name="HunterSimulator_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro Caçador.pdf</value>
+  </data>
+  <data name="Hunter_QuotationSubjectText" xml:space="preserve">
+    <value>Simulação CAÇADOR Lusitania</value>
+  </data>
+  <data name="BeneficiariesByDeath" xml:space="preserve">
+    <value>Beneficiários por Morte</value>
+  </data>
+  <data name="HolderHasHeirs" xml:space="preserve">
+    <value>Herdeiros Legais do Titular ?</value>
+  </data>
+  <data name="MaxLengthHeir" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="ErrorUnknown" xml:space="preserve">
+    <value>Surgiu um erro na submissão, por favor tente novamente!</value>
+  </data>
+  <data name="MaxLengthCompany" xml:space="preserve">
+    <value>50</value>
+  </data>
+  <data name="ErrorMessageMaximumDateBegin" xml:space="preserve">
+    <value>A data de início não pode ser posterior a {0}</value>
+  </data>
+  <data name="ErrorMessageMinimumDateBegin" xml:space="preserve">
+    <value>A data de início não pode ser anterior a {0}</value>
+  </data>
+  <data name="BicicletasSimDisclaimer" xml:space="preserve">
+    <value>Para Pessoas Seguras de idade até 14 anos, a cobertura Morte ou Invalidez Permanente apenas garante o risco de Invalidez Permanente.&lt;br&gt;As Pessoas Seguras terão de ter até 65 anos de idade na data de adesão.</value>
+  </data>
+  <data name="BicicletasSimulator_QuotationAttachmentNameForPdf" xml:space="preserve">
+    <value>Cotação de Seguro Bicicletas.pdf</value>
+  </data>
+  <data name="SelectKinText" xml:space="preserve">
+    <value>Seleccione o Parentesco</value>
+  </data>
+  <data name="PersonInfo_SelectPersonClient" xml:space="preserve">
+    <value>Seleccione um Cliente</value>
+  </data>
+  <data name="ErroPesquisaBIC" xml:space="preserve">
+    <value>Não foi possível obter o BIC automáticamente. Por favor efectue a pesquisa.</value>
+  </data>
+  <data name="RecordSetQuotation" xml:space="preserve">
+    <value>BIKEINSURANCEQUOTATION</value>
+  </data>
+  <data name="XDPQuotation" xml:space="preserve">
+    <value>cotacao_rc.xdp</value>
+  </data>
+  <data name="QuestaoImpCotacao" xml:space="preserve">
+    <value>Os seus dados pessoais ainda não estão preenchidos.&lt;br&gt;Deseja imprimir mesmo assim?</value>
+  </data>
+  <data name="SapIsNOK" xml:space="preserve">
+    <value>Documento temporariamente indisponível. Por favor tente mais tarde.</value>
+  </data>
+</root>

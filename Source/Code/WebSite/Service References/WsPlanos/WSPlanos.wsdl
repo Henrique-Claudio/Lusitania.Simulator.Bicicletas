@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSPlanos" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IWSPlanos_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://dev_appfabric/Planos/servicos/WSPlanos.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://dev_appfabric/Planos/servicos/WSPlanos.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://dev_appfabric/Planos/servicos/WSPlanos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Planos" />
+      <xsd:import schemaLocation="https://dev_appfabric/Planos/servicos/WSPlanos.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ModelPlanos" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWSPlanos_ObtemProxVencimentoPlanos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemProxVencimentoPlanos" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_ObtemProxVencimentoPlanos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemProxVencimentoPlanosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_GetProxVencimentoPlanos2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProxVencimentoPlanos2" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_GetProxVencimentoPlanos2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProxVencimentoPlanos2Response" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_ObtemDadosPlano_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemDadosPlano" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_ObtemDadosPlano_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemDadosPlanoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_ObtemDadosPagamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemDadosPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_ObtemDadosPagamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemDadosPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_ObtemURLPlano_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemURLPlano" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_ObtemURLPlano_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtemURLPlanoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_InsereDadosPagamento_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsereDadosPagamento" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_InsereDadosPagamento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsereDadosPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_Saber_PessoaProv_InputMessage">
+    <wsdl:part name="parameters" element="tns:Saber_PessoaProv" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_Saber_PessoaProv_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Saber_PessoaProvResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_SaveContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContract" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_SaveContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_PreSelectCommercialAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:PreSelectCommercialAccount" />
+  </wsdl:message>
+  <wsdl:message name="IWSPlanos_PreSelectCommercialAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PreSelectCommercialAccountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWSPlanos">
+    <wsdl:operation name="ObtemProxVencimentoPlanos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/ObtemProxVencimentoPlanos" message="tns:IWSPlanos_ObtemProxVencimentoPlanos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/ObtemProxVencimentoPlanosResponse" message="tns:IWSPlanos_ObtemProxVencimentoPlanos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProxVencimentoPlanos2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/GetProxVencimentoPlanos2" message="tns:IWSPlanos_GetProxVencimentoPlanos2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/GetProxVencimentoPlanos2Response" message="tns:IWSPlanos_GetProxVencimentoPlanos2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtemDadosPlano">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/ObtemDadosPlano" message="tns:IWSPlanos_ObtemDadosPlano_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/ObtemDadosPlanoResponse" message="tns:IWSPlanos_ObtemDadosPlano_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtemDadosPagamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/ObtemDadosPagamento" message="tns:IWSPlanos_ObtemDadosPagamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/ObtemDadosPagamentoResponse" message="tns:IWSPlanos_ObtemDadosPagamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtemURLPlano">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/ObtemURLPlano" message="tns:IWSPlanos_ObtemURLPlano_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/ObtemURLPlanoResponse" message="tns:IWSPlanos_ObtemURLPlano_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereDadosPagamento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/InsereDadosPagamento" message="tns:IWSPlanos_InsereDadosPagamento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/InsereDadosPagamentoResponse" message="tns:IWSPlanos_InsereDadosPagamento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Saber_PessoaProv">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/Saber_PessoaProv" message="tns:IWSPlanos_Saber_PessoaProv_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/Saber_PessoaProvResponse" message="tns:IWSPlanos_Saber_PessoaProv_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/SaveContract" message="tns:IWSPlanos_SaveContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/SaveContractResponse" message="tns:IWSPlanos_SaveContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PreSelectCommercialAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSPlanos/PreSelectCommercialAccount" message="tns:IWSPlanos_PreSelectCommercialAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSPlanos/PreSelectCommercialAccountResponse" message="tns:IWSPlanos_PreSelectCommercialAccount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IWSPlanos" type="tns:IWSPlanos">
+    <wsp:PolicyReference URI="#WSHttpBinding_IWSPlanos_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ObtemProxVencimentoPlanos">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/ObtemProxVencimentoPlanos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProxVencimentoPlanos2">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/GetProxVencimentoPlanos2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtemDadosPlano">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/ObtemDadosPlano" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtemDadosPagamento">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/ObtemDadosPagamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtemURLPlano">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/ObtemURLPlano" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereDadosPagamento">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/InsereDadosPagamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Saber_PessoaProv">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/Saber_PessoaProv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveContract">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/SaveContract" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreSelectCommercialAccount">
+      <soap12:operation soapAction="http://tempuri.org/IWSPlanos/PreSelectCommercialAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSPlanos">
+    <wsdl:port name="WSHttpBinding_IWSPlanos" binding="tns:WSHttpBinding_IWSPlanos">
+      <soap12:address location="https://dev_appfabric/Planos/servicos/WSPlanos.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://dev_appfabric/Planos/servicos/WSPlanos.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/DEV_APPFABRIC.lusitania-cs.pt</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

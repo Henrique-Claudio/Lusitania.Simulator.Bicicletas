@@ -1,0 +1,14 @@
+<asp:Menu runat="server" SkinID="MainBar" Orientation="Vertical">
+
+    <StaticMenuStyle BackColor="Navy" HorizontalPadding="1px" VerticalPadding="1px" Height="20px" />
+    <StaticMenuItemStyle Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" ForeColor="White" Height="18px" ItemSpacing="1px" HorizontalPadding="5px" VerticalPadding="3px" />
+    <StaticHoverStyle ForeColor="Navy" BackColor="White" Height="18px" />
+    
+    <DynamicMenuStyle BackColor="Navy" HorizontalPadding="1px" VerticalPadding="1px" BorderColor="White" BorderStyle="Solid" BorderWidth="1" />
+    <DynamicMenuItemStyle Font-Names="Verdana" Font-Size="8pt" Font-Bold="true" ForeColor="White" Height="100%" ItemSpacing="1px" HorizontalPadding="5px" VerticalPadding="3px" />
+    <DynamicHoverStyle ForeColor="Navy" BackColor="White" Height="100%" />
+    
+    <StaticSelectedStyle BackColor="Gold" ForeColor="Navy" />
+    <DynamicSelectedStyle BackColor="Gold" ForeColor="Navy" />
+    
+</asp:Menu>

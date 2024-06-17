@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Lusitania.Simuladores.WebSite.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Lusitania_Simuladores_WebSite_OutputES_OutputServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.1.1.150:8085/soap/services/OutputService</Value>
+    </Setting>
+    <Setting Name="Lusitania_Simuladores_WebSite_WSLUSNETConfig_Config" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://lusagq/WSLUSNET/Framework/Aplicacoes/Config.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

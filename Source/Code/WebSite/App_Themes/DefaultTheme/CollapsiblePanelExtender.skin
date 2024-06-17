@@ -1,0 +1,2 @@
+<ajax:CollapsiblePanelExtender runat="server" CollapsedImage="../../Images/show.gif" ExpandedImage="../../Images/hide.gif" CollapsedText="Revelar" ExpandedText="Ocultar">
+</ajax:CollapsiblePanelExtender>

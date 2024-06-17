@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://dev_appfabric/Planos/servicos/WSPlanos.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Planos" />
+  <xs:import schemaLocation="https://dev_appfabric/Planos/servicos/WSPlanos.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ModelPlanos" />
+  <xs:element name="ObtemProxVencimentoPlanos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtemProxVencimentoPlanosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtemProxVencimentoPlanosResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProxVencimentoPlanos2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="data_inicio" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="cod_plano" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProxVencimentoPlanos2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProxVencimentoPlanos2Result" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtemDadosPlano">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plan_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtemDadosPlanoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Lusitania.Model.Planos" minOccurs="0" name="ObtemDadosPlanoResult" nillable="true" type="q1:Plano" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtemDadosPagamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plan_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtemDadosPagamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Lusitania.Model.Planos" minOccurs="0" name="ObtemDadosPagamentoResult" nillable="true" type="q2:Pagamento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtemURLPlano">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="planID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtemURLPlanoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObtemURLPlanoResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="planCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="planDesc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsereDadosPagamento">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plan_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="metodo_pagamento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="nib" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsereDadosPagamentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InsereDadosPagamentoResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="error_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="error_description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Saber_PessoaProv">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PlanID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Saber_PessoaProvResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Lusitania.Model.Planos" minOccurs="0" name="Saber_PessoaProvResult" nillable="true" type="q3:ArrayOfPessoaProv" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContract">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/ModelPlanos" minOccurs="0" name="listaContratos" nillable="true" type="q4:ContractList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveContractResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/ModelPlanos" minOccurs="0" name="SaveContractResult" nillable="true" type="q5:ContractList" />
+        <xs:element minOccurs="0" name="cod_error" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desc_error" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreSelectCommercialAccount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="planID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PreSelectCommercialAccountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mediator" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="collector" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

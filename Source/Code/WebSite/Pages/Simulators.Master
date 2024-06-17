@@ -1,0 +1,129 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="Lusitania.Simuladores.WebSite.Pages.Simulators"
+    CodeBehind="Simulators.master.cs" %>
+
+<%@ Register Src="~/Controls/DebugLoggedUserControl.ascx" TagPrefix="app" TagName="DebugLoggedUserControl" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=100"/>
+    <title>Simulador de Seguro Bicicletas</title>
+    <link rel="shortcut icon" type="image/png" href="~/Images/favicon.png"/>
+    <link href="../Script/css jq ui/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../Script/Custom popUp/popUp.css" rel="stylesheet" type="text/css" />   
+    <script type="text/javascript" src="Script/GoogleAnalytics.js"></script>
+</head>
+<body class="SimulatorBody">
+    <div id="container">
+        <form id="form1" runat="server">
+        <ajax:scriptmanager id="ScriptManager1" runat="server" enablepartialrendering="True"
+            enablescriptglobalization="True" enablescriptlocalization="True" scriptmode="Release">            
+        </ajax:scriptmanager>
+       
+    
+   <%--    <script type="text/javascript" src="Script/jquery-3.6.0.js"></script>
+            <script type="text/javascript" src="Script/jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+
+            <script type="text/javascript" src="Script/css jq ui/jquery.ui.datepicker-pt.js"></script> 
+            <script type="text/javascript" src="Script/Plugins.js"></script>
+            <script type="text/javascript" src="Script/Custom popUp/popUp.js"></script>
+            <script type="text/javascript" src="Script/Safari3AjaxHack.js"></script>
+            <script type="text/javascript" src="Script/Utility.js"></script>
+            <script type="text/javascript" src="Script/Helper.js"></script>--%>
+         
+        <script type="text/javascript" src="Script/jquery-1.8.3.js"></script>
+        <script type="text/javascript" src="Script/jquery-ui-1.10.4.custom.js"></script>
+        <script type="text/javascript" src="Script/css jq ui/jquery.ui.datepicker-pt.js"></script>
+        <script type="text/javascript" src="Script/Plugins.js"></script>
+        <script type="text/javascript" src="Script/Custom popUp/popUp.js"></script>
+        <script type="text/javascript" src="Script/Safari3AjaxHack.js"></script>
+        <script type="text/javascript" src="Script/Utility.js"></script>
+        <script type="text/javascript" src="Script/Helper.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(addRequestHandler);
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(endRequestHandler);
+
+            function endRequestHandler(sender, args) {
+                $('input[type="text"][format="date"]').datepicker({
+                    changeMonth: true,
+                    changeYear: true,
+                    yearRange: "1900:+0",
+                    dateFormat: 'dd-mm-yy'
+                });
+
+                $('.Icon-InfoBox').each(function () {
+                    $(this).InfoBox();
+                });
+
+                $('input[format="number"]').each(function () {
+                    $(this).NumericInput();
+                });
+
+                $('img.DetailTooltip').each(function () {
+                    $(this).ToolTipInfo();
+                });
+
+                var _collapsiblePanels = new _collapsiblePanel();
+
+
+                $('input[open-popup]').each(function (index, el) {
+                    var _btn = $(el);
+                    _btn.click(function (e) {
+
+                        var pop = $find(_btn.attr('open-popup'));
+                        if (pop != null) {
+                            pop.set_Y(event.clientY - 150);
+                            pop.show();
+                        }
+                    });
+                });
+
+
+
+                $.fn.LoaderClose();
+
+            }
+
+            function addRequestHandler(sender, args) {
+
+                $.fn.LoaderShow();
+
+            }
+
+            addRequestHandler();
+            endRequestHandler();
+
+            CallGoogleAnalytics('<%=ConfigurationManager.AppSettings["GA_TRACKING_ID"] %>', '<%=ConfigurationManager.AppSettings["GA_TRACKING_ENABLE"] %>');
+
+        });
+
+    </script>
+
+        <asp:ContentPlaceHolder ID="mMenuContent" runat="server">           
+            <ajax:updatepanel id="mDebugLoggedUserControlUpdatePanel" runat="server" updatemode="Conditional">
+                <ContentTemplate>
+                    <asp:Panel ID="mDebugLoggedUserControlPanel" runat="server" SkinID="TopRightOverlay">
+                        <app:DebugLoggedUserControl ID="mDebugLoggedUserControl" runat="server" />
+                    </asp:Panel>
+                </ContentTemplate>
+            </ajax:updatepanel>
+        </asp:ContentPlaceHolder>
+        <asp:Panel ID="mBodyContent" runat="server" SkinID="BodyColumn">
+            <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <div runat="server" id="divBR">
+            </div>
+            <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </asp:Panel>
+        <asp:Panel ID="mFooterContent" runat="server" SkinID="BodyColumn">
+            <asp:ContentPlaceHolder ID="FooterContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </asp:Panel>
+        </form>
+    </div>
+</body>
+</html>

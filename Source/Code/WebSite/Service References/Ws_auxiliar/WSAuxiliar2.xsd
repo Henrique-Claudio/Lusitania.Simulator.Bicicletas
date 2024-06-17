@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" />
+  <xs:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Simuladores.Negocio" />
+  <xs:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Entidades.Classes" />
+  <xs:element name="GetTipoRecibos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTipoRecibosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetTipoRecibosResult" nillable="true" type="q1:ArrayOfCodigoDescritivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmbitoRecibos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAmbitoRecibosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetAmbitoRecibosResult" nillable="true" type="q2:ArrayOfCodigoDescritivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotivosDevolucao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotivosDevolucaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetMotivosDevolucaoResult" nillable="true" type="q3:ArrayOfCodigoDescritivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSituacoesRecibos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSituacoesRecibosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetSituacoesRecibosResult" nillable="true" type="q4:ArrayOfCodigoDescritivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnderecosCTT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CodigoPostal4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CodigoPostal3" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEnderecosCTTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetEnderecosCTTResult" nillable="true" type="q5:ArrayOfMorada" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarMediador">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmConta" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidarMediadorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidarMediadorResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmNomeMediador" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePiDadosInstitucional">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePiDadosInstitucionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePiDadosInstitucionalResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TemErro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_Xml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="simulationID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tipoReport" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get_XmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Get_XmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Le_Xml_Aviso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RamoID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApoliceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReciboID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Le_Xml_AvisoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Le_Xml_AvisoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Le_Xml_PP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RamoID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApoliceID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Le_Xml_PPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Le_Xml_PPResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Desce_Recibo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RamoID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ApoliceID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LoginID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReciboID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Desce_ReciboResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Desce_ReciboResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ReciboNew" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Erro" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MsgErro" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Valida_ListaNegra_Nif">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nif" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Valida_ListaNegra_NifResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Valida_ListaNegra_NifResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncodeUsername">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EncodeUsernameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EncodeUsernameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecodeUsername">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="encoded_username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DecodeUsernameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DecodeUsernameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContaComercial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContaComercialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContaComercialResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateContaComercial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="conta_comercial" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="num_isp" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateContaComercialResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateContaComercialResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsereComentario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmRms" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="simulationID" type="xs:int" />
+        <xs:element minOccurs="0" name="prmObs" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsereComentarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterEscaloesRendimento">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterEscaloesRendimentoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="obterEscaloesRendimentoResult" nillable="true" type="q6:ArrayOfEscaloesRendimento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterTipologiasHabitacao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterTipologiasHabitacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="obterTipologiasHabitacaoResult" nillable="true" type="q7:ArrayOfTipologiasHabitacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterUsufrutoHabitacao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterUsufrutoHabitacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="obterUsufrutoHabitacaoResult" nillable="true" type="q8:ArrayOfUsufrutoHabitacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterHorarioContacto">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterHorarioContactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="obterHorarioContactoResult" nillable="true" type="q9:ArrayOfHorarioContacto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validarNIF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmNIF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validarNIFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="validarNIFResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterEnderecosCTT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmCp4" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmCp3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmArteria" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmLugar" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterEnderecosCTTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Lusitania.Model.Simuladores.Negocio" minOccurs="0" name="obterEnderecosCTTResult" nillable="true" type="q10:ArrayOfMlEnderecoCTT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validarAnulacoesRecentes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmXml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validarAnulacoesRecentesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="validarAnulacoesRecentesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insereOutputDocUpload">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmGUID_DOC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmDocType" nillable="true" type="xs:decimal" />
+        <xs:element minOccurs="0" name="prmRenderedDoc" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="insereOutputDocUploadResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validarIBANObterBIC">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmIBAN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmBIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmValido" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="validarIBANObterBICResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="prmBIC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="prmValido" nillable="true" type="xs:decimal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActividadesEconomicas">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActividadesEconomicasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetActividadesEconomicasResult" nillable="true" type="q11:ArrayOfActividadeEconomica" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValoresSalario">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValoresSalarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetValoresSalarioResult" nillable="true" type="q12:ArrayOfValorSalario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesSexo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesSexoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesSexoResult" nillable="true" type="q13:ArrayOfSexo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesEstadoCivil">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesEstadoCivilResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesEstadoCivilResult" nillable="true" type="q14:ArrayOfEstadoCivil" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesProfissoes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Lusitania.Model.Entidades.Classes" minOccurs="0" name="gender" type="q15:ClEnumeration.GenderType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesProfissoesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesProfissoesResult" nillable="true" type="q16:ArrayOfProfissao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesNacionalidades">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesNacionalidadesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesNacionalidadesResult" nillable="true" type="q17:ArrayOfNacionalidade" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesActividadesProfissionais">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesActividadesProfissionaisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesActividadesProfissionaisResult" nillable="true" type="q18:ArrayOfActividadeProfissional" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesTitulosNome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesTitulosNomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesTitulosNomeResult" nillable="true" type="q19:ArrayOfTituloNome" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesPaises">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesPaisesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesPaisesResult" nillable="true" type="q20:ArrayOfPais" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredoresHipotecarios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCredoresHipotecariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetCredoresHipotecariosResult" nillable="true" type="q21:ArrayOfCredorHipotecario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesParentesco">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesParentescoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesParentescoResult" nillable="true" type="q22:ArrayOfParentesco" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesModalidades">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesModalidadesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesModalidadesResult" nillable="true" type="q23:ArrayOfModalidade" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesFacturacaoAnual">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesFacturacaoAnualResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesFacturacaoAnualResult" nillable="true" type="q24:ArrayOfFacturacaoAnual" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesFuncao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesFuncaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesFuncaoResult" nillable="true" type="q25:ArrayOfFuncao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesHabilitacao">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesHabilitacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesHabilitacaoResult" nillable="true" type="q26:ArrayOfHabilitacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterTodasHabilitacoes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="obterTodasHabilitacoesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="obterTodasHabilitacoesResult" nillable="true" type="q27:ArrayOfHabilitacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesMeioContacto">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesMeioContactoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesMeioContactoResult" nillable="true" type="q28:ArrayOfMeioContacto" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesNumeroAutomoveis">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesNumeroAutomoveisResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesNumeroAutomoveisResult" nillable="true" type="q29:ArrayOfNumeroAutomoveis" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesNumeroFuncionarios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesNumeroFuncionariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesNumeroFuncionariosResult" nillable="true" type="q30:ArrayOfNumeroFuncionarios" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesSituacaoProfissional">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOpcoesSituacaoProfissionalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetOpcoesSituacaoProfissionalResult" nillable="true" type="q31:ArrayOfSituacaoProfissional" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataInicio">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataInicioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataInicioResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataMaxima">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataMaximaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDataMaximaResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValorSistema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sistema" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="zona" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValorSistemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetValorSistemaResult" nillable="true" type="q32:ValorSistema" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaberMeses">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaberMesesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="SaberMesesResult" nillable="true" type="q33:ArrayOfMes" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListQuestoesSimulador">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListQuestoesSimuladorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetListQuestoesSimuladorResult" nillable="true" type="q34:ArrayOfQuestoesSimulador" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPessoa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="codigo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NIF" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPessoaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetPessoaResult" nillable="true" type="q35:Pessoa" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstadosAlerta">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEstadosAlertaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetEstadosAlertaResult" nillable="true" type="q36:ArrayOfCodigoDescritivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSituacoesApolice">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSituacoesApoliceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" minOccurs="0" name="GetSituacoesApoliceResult" nillable="true" type="q37:ArrayOfCodigoDescritivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

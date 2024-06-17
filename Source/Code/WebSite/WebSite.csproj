@@ -1,0 +1,1149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <Import Project="..\..\..\packages\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\build\MSBuild.Microsoft.VisualStudio.Web.targets.props" Condition="Exists('..\..\..\packages\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\build\MSBuild.Microsoft.VisualStudio.Web.targets.props')" />
+  <UsingTask TaskName="TransformXml" AssemblyFile="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Web\Microsoft.Web.Publishing.Tasks.dll" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E8B85784-B8C2-4641-A9C3-3091B0456AAB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lusitania.Simuladores.WebSite</RootNamespace>
+    <AssemblyName>Lusitania.Simuladores.WebSite</AssemblyName>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Dev|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Qual|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;QUAL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Prod|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;PROD</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'VS2008|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Dev\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Qual|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Qual\</OutputPath>
+    <DefineConstants>TRACE;QUAL</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prod|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Prod\</OutputPath>
+    <DefineConstants>TRACE;PROD</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'VS2008|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\VS2008\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DEV</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20229.20821, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Libs\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="DBauer.Web.UI.WebControls.DynamicControlsPlaceholder">
+      <HintPath>..\..\..\..\..\Libs\DynamicControlsPlaceholder\DBauer.Web.UI.WebControls.DynamicControlsPlaceholder.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\..\..\..\..\Libs\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.Shared.v8.1">
+      <HintPath>..\..\..\..\..\Libs\Infragistics\Infragistics2.WebUI.Shared.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics2.WebUI.WebDataInput.v8.1">
+      <HintPath>..\..\..\..\..\Libs\Infragistics\Infragistics2.WebUI.WebDataInput.v8.1.dll</HintPath>
+    </Reference>
+    <Reference Include="LusnetBase">
+      <HintPath>..\..\..\..\..\Libs\LUSNET DLLs\LusnetBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Libs\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Libs\Microsoft.ReportViewer.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ModelFramework">
+      <HintPath>..\..\..\..\..\Libs\LUSNET DLLs\ModelFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.UI">
+      <HintPath>..\..\..\..\..\Libs\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Utilities">
+      <HintPath>..\..\..\..\..\Libs\LUSNET DLLs\Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Validators, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Libs\Validators.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\fileholder.txt" />
+    <Content Include="App_Themes\DefaultTheme\datepick.css" />
+    <Content Include="App_Themes\DefaultTheme\Images\checkbox.gif" />
+    <Content Include="App_Themes\DefaultTheme\Images\radio.gif" />
+    <Content Include="App_Themes\DefaultTheme\reset.css" />
+    <Content Include="App_Themes\DefaultTheme\styleGlobal.css" />
+    <Content Include="App_Themes\DefaultTheme\typography.css" />
+    <Content Include="Controls\BancSearch.ascx" />
+    <Content Include="Controls\Beneficiarios.ascx" />
+    <Content Include="Controls\BicicletasHeirListControl.ascx" />
+    <Content Include="Controls\BicicletasSaveContractQuestions.ascx" />
+    <Content Include="Controls\ClientData.ascx" />
+    <Content Include="Controls\Inquerito.ascx" />
+    <Content Include="Controls\MultiTarificador.ascx" />
+    <Content Include="Controls\InsuranceData.ascx" />
+    <Content Include="Controls\ObjetoSeguro.ascx" />
+    <Content Include="Controls\Person.ascx" />
+    <Content Include="Controls\Fraccionamento.ascx" />
+    <Content Include="Controls\PessoaSegura.ascx" />
+    <Content Include="Controls\RGPD.ascx" />
+    <Content Include="Controls\SaveContractQuestions.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\AddLine.gif" />
+    <Content Include="Images\banner_topo_Bicicletas.jpg" />
+    <Content Include="Images\bg_form_section.jpg" />
+    <Content Include="Images\bg_green.jpg" />
+    <Content Include="Images\bg_input.gif" />
+    <Content Include="Images\bg_input_hover.gif" />
+    <Content Include="Images\btn\black.png" />
+    <Content Include="Images\btn\green.gif" />
+    <Content Include="Images\btn\green.png" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\img_h4.png" />
+    <Content Include="Images\InfoAssistEmViagem.png" />
+    <Content Include="Images\info_descount.png" />
+    <Content Include="Images\logo2.jpg" />
+    <Content Include="Images\logo_lusitania.png" />
+    <Content Include="Images\logo_lusitania_original.png" />
+    <Content Include="BicicletasProposal.aspx" />
+    <Content Include="Home.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Bicicletas.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bicicletas.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Hunter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Hunter.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UserControlLinks.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserControlLinks.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\OutputsManagement.cs" />
+    <Compile Include="Common\BusinessHelper.cs" />
+    <Compile Include="Common\ClComum.cs" />
+    <Compile Include="Common\SessionKeys.cs" />
+    <Compile Include="Common\Settings.cs" />
+    <Compile Include="Common\Simulators.cs" />
+    <Compile Include="Common\UserHelper.cs" />
+    <Compile Include="Common\WsHelper.cs" />
+    <Compile Include="Controls\BancSearch.ascx.cs">
+      <DependentUpon>BancSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BancSearch.ascx.designer.cs">
+      <DependentUpon>BancSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Beneficiarios.ascx.cs">
+      <DependentUpon>Beneficiarios.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Beneficiarios.ascx.designer.cs">
+      <DependentUpon>Beneficiarios.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BicicletasHeirListControl.ascx.cs">
+      <DependentUpon>BicicletasHeirListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BicicletasHeirListControl.ascx.designer.cs">
+      <DependentUpon>BicicletasHeirListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BicicletasSaveContractQuestions.ascx.cs">
+      <DependentUpon>BicicletasSaveContractQuestions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BicicletasSaveContractQuestions.ascx.designer.cs">
+      <DependentUpon>BicicletasSaveContractQuestions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ClientData.ascx.cs">
+      <DependentUpon>ClientData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ClientData.ascx.designer.cs">
+      <DependentUpon>ClientData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Inquerito.ascx.cs">
+      <DependentUpon>Inquerito.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Inquerito.ascx.designer.cs">
+      <DependentUpon>Inquerito.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\MultiTarificador.ascx.cs">
+      <DependentUpon>MultiTarificador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\MultiTarificador.ascx.designer.cs">
+      <DependentUpon>MultiTarificador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\InsuranceData.ascx.cs">
+      <DependentUpon>InsuranceData.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\InsuranceData.ascx.designer.cs">
+      <DependentUpon>InsuranceData.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ObjetoSeguro.ascx.cs">
+      <DependentUpon>ObjetoSeguro.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ObjetoSeguro.ascx.designer.cs">
+      <DependentUpon>ObjetoSeguro.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Person.ascx.cs">
+      <DependentUpon>Person.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Person.ascx.designer.cs">
+      <DependentUpon>Person.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BicicletasProposal.aspx.cs">
+      <DependentUpon>BicicletasProposal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BicicletasProposal.aspx.designer.cs">
+      <DependentUpon>BicicletasProposal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ClControloBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Classes\ClEnumeration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\ClXmlPessoas.cs" />
+    <Compile Include="Classes\Interfaces\IControloBase.cs" />
+    <Compile Include="Classes\Interfaces\ILusitaniaControls.cs" />
+    <Compile Include="Classes\Interfaces\IPaginaBase.cs" />
+    <Compile Include="Classes\MlContacto.cs" />
+    <Compile Include="Classes\MlPessoaSegura.cs" />
+    <Compile Include="Common\BaseMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ControlHelper.cs" />
+    <Compile Include="Common\CryptographyHelper.cs" />
+    <Compile Include="Common\DummyDataObject.cs" />
+    <Compile Include="Common\MyPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\MySession.cs" />
+    <Compile Include="Common\MyUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ProtectedURL.cs" />
+    <Compile Include="Common\QuotationEventArgs.cs" />
+    <Compile Include="Common\QuotationEvent.cs" />
+    <Compile Include="Common\QuotationPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\ScriptHelper.cs" />
+    <Compile Include="Common\SimulatorPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Common\UserInterfaceService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\WebUtility.cs" />
+    <Compile Include="App_GlobalResources\PageLinks.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PageLinks.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Strings.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AddressSearch.ascx.cs">
+      <DependentUpon>AddressSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AddressSearch.ascx.designer.cs">
+      <DependentUpon>AddressSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BicicletasPlan.ascx.cs">
+      <DependentUpon>BicicletasPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BicicletasPlan.ascx.designer.cs">
+      <DependentUpon>BicicletasPlan.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\BicicletasSendToPopupControl.ascx.cs">
+      <DependentUpon>BicicletasSendToPopupControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\BicicletasSendToPopupControl.ascx.designer.cs">
+      <DependentUpon>BicicletasSendToPopupControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommercialAccount.ascx.cs">
+      <DependentUpon>CommercialAccount.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CommercialAccount.ascx.designer.cs">
+      <DependentUpon>CommercialAccount.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CreatedBy.ascx.cs">
+      <DependentUpon>CreatedBy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CreatedBy.ascx.designer.cs">
+      <DependentUpon>CreatedBy.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DebugLoggedUserControl.ascx.cs">
+      <DependentUpon>DebugLoggedUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DebugLoggedUserControl.ascx.designer.cs">
+      <DependentUpon>DebugLoggedUserControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ModeloColaborativo.ascx.cs">
+      <DependentUpon>ModeloColaborativo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ModeloColaborativo.ascx.designer.cs">
+      <DependentUpon>ModeloColaborativo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Notes.ascx.cs">
+      <DependentUpon>Notes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Notes.ascx.designer.cs">
+      <DependentUpon>Notes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PessoaSegura.ascx.cs">
+      <DependentUpon>PessoaSegura.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\PessoaSegura.ascx.designer.cs">
+      <DependentUpon>PessoaSegura.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProposalUserDetails.ascx.cs">
+      <DependentUpon>ProposalUserDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ProposalUserDetails.ascx.designer.cs">
+      <DependentUpon>ProposalUserDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuotationDetails.ascx.cs">
+      <DependentUpon>QuotationDetails.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QuotationDetails.ascx.designer.cs">
+      <DependentUpon>QuotationDetails.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\QuotationResults.ascx.cs">
+      <DependentUpon>QuotationResults.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\QuotationResults.ascx.designer.cs">
+      <DependentUpon>QuotationResults.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RGPD.ascx.cs">
+      <DependentUpon>RGPD.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\RGPD.ascx.designer.cs">
+      <DependentUpon>RGPD.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SaveContractQuestions.ascx.cs">
+      <DependentUpon>SaveContractQuestions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SaveContractQuestions.ascx.designer.cs">
+      <DependentUpon>SaveContractQuestions.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SendToControl.ascx.cs">
+      <DependentUpon>SendToControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SendToControl.ascx.designer.cs">
+      <DependentUpon>SendToControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SendToPopupControl.ascx.cs">
+      <DependentUpon>SendToPopupControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\SendToPopupControl.ascx.designer.cs">
+      <DependentUpon>SendToPopupControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserSuggestionsControl.ascx.cs">
+      <DependentUpon>UserSuggestionsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\UserSuggestionsControl.ascx.designer.cs">
+      <DependentUpon>UserSuggestionsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Fraccionamento.ascx.cs">
+      <DependentUpon>Fraccionamento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Fraccionamento.ascx.designer.cs">
+      <DependentUpon>Fraccionamento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Helpers\ChildrenProtection.cs" />
+    <Compile Include="Helpers\Hunter.cs" />
+    <Compile Include="Helpers\Proposal.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BicicletasSimulator.aspx.cs">
+      <DependentUpon>BicicletasSimulator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BicicletasSimulator.aspx.designer.cs">
+      <DependentUpon>BicicletasSimulator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OutputES_PDF.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>OutputES_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OutputES_PDF.aspx.designer.cs">
+      <DependentUpon>OutputES_PDF.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Simulators.Master.cs">
+      <DependentUpon>Simulators.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Simulators.Master.designer.cs">
+      <DependentUpon>Simulators.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WsDocumentos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WsPlanos\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Ws_auxiliar\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Tests\AddressSearch.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>AddressSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\AddressSearch.aspx.designer.cs">
+      <DependentUpon>AddressSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\EncryptionTest.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>EncryptionTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\EncryptionTest.aspx.designer.cs">
+      <DependentUpon>EncryptionTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\UserDetails.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\UserDetails.aspx.designer.cs">
+      <DependentUpon>UserDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\WebForm1.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\WebForm2.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WSLUSNETConfig\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\DefaultTheme\Button.skin" />
+    <Content Include="App_Themes\DefaultTheme\CalendarExtender.skin" />
+    <Content Include="App_Themes\DefaultTheme\CheckBox.skin" />
+    <Content Include="App_Themes\DefaultTheme\CollapsiblePanelExtender.skin" />
+    <Content Include="App_Themes\DefaultTheme\DataGrid.skin" />
+    <Content Include="App_Themes\DefaultTheme\DropDownList.skin" />
+    <Content Include="App_Themes\DefaultTheme\FilteredTextBoxExtender.skin" />
+    <Content Include="App_Themes\DefaultTheme\GridView.skin" />
+    <Content Include="App_Themes\DefaultTheme\HyperLink.skin" />
+    <Content Include="App_Themes\DefaultTheme\Image.skin" />
+    <Content Include="App_Themes\DefaultTheme\ImageButton.skin" />
+    <Content Include="App_Themes\DefaultTheme\Label.skin" />
+    <Content Include="App_Themes\DefaultTheme\LinkButton.skin" />
+    <Content Include="App_Themes\DefaultTheme\ListBox.skin" />
+    <Content Include="App_Themes\DefaultTheme\ListSearchExtender.skin" />
+    <Content Include="App_Themes\DefaultTheme\Menu.skin" />
+    <Content Include="App_Themes\DefaultTheme\ModalPopupExtender.skin" />
+    <Content Include="App_Themes\DefaultTheme\Panel.skin" />
+    <Content Include="App_Themes\DefaultTheme\RadioButton.skin" />
+    <Content Include="App_Themes\DefaultTheme\RadioButtonList.skin" />
+    <Content Include="App_Themes\DefaultTheme\TableRow.skin" />
+    <Content Include="App_Themes\DefaultTheme\TextBox.skin" />
+    <Content Include="App_Themes\DefaultTheme\TreeView.skin" />
+    <Content Include="App_Themes\DefaultTheme\ValidatorCalloutExtender.skin" />
+    <Content Include="Script\jquery-3.6.0.js" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\AUTHORS.txt" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\external\jquery\jquery.js" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\images\ui-icons_444444_256x240.png" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\images\ui-icons_555555_256x240.png" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\images\ui-icons_777620_256x240.png" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\images\ui-icons_777777_256x240.png" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\index.html" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.css" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.js" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.min.css" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.min.js" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.structure.css" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.structure.min.css" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.theme.css" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\jquery-ui.theme.min.css" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\LICENSE.txt" />
+    <Content Include="Script\jquery-ui.js" />
+    <Content Include="Web.config.template">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="copyifdiff.bat" />
+    <Content Include="Documents\CONDICAO_ESPECIAL_030.XLSX" />
+    <Content Include="Documents\Mod 029_Nota Informativa RC Geral Bicicletas_201405.pdf" />
+    <None Include="packages.config" />
+    <Content Include="Script\jquery-ui-1.13.1.custom\package.json" />
+    <None Include="Service References\WsDocumentos\Lusitania.Simuladores.WebSite.WsDocumentos.MlSegundaVia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsDocumentos\WSDocumentos.wsdl" />
+    <None Include="Service References\WsDocumentos\WSDocumentos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsDocumentos\WSDocumentos1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsDocumentos\WSDocumentos2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsDocumentos\WSDocumentos3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsPlanos\Lusitania.Simuladores.WebSite.WsPlanos.ContractList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsPlanos\Lusitania.Simuladores.WebSite.WsPlanos.Pagamento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsPlanos\Lusitania.Simuladores.WebSite.WsPlanos.PessoaProv1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsPlanos\Lusitania.Simuladores.WebSite.WsPlanos.Plano.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WsPlanos\WSPlanos.wsdl" />
+    <None Include="Service References\WsPlanos\WSPlanos.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsPlanos\WSPlanos1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsPlanos\WSPlanos2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WsPlanos\WSPlanos3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.ActividadeEconomica.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.ActividadeProfissional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.CodigoDescritivo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.CredorHipotecario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.EscaloesRendimento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.EstadoCivil.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.FacturacaoAnual.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Funcao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Habilitacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.HorarioContacto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.MeioContacto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Mes.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.MlEnderecoCTT.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Modalidade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Morada.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Nacionalidade.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.NumeroAutomoveis.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.NumeroFuncionarios.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Pais.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Parentesco.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Pessoa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Profissao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.QuestoesSimulador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.Sexo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.SituacaoProfissional.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.TipologiasHabitacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.TituloNome.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.UsufrutoHabitacao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.ValorSalario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\Lusitania.Simuladores.WebSite.Ws_auxiliar.ValorSistema.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar.disco" />
+    <None Include="Service References\Ws_auxiliar\configuration91.svcinfo" />
+    <None Include="Service References\Ws_auxiliar\configuration.svcinfo" />
+    <None Include="Service References\Ws_auxiliar\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WsPlanos\WSPlanos.disco" />
+    <None Include="Service References\WsPlanos\configuration91.svcinfo" />
+    <None Include="Service References\WsPlanos\configuration.svcinfo" />
+    <None Include="Service References\WsPlanos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\WsDocumentos\WSDocumentos.disco" />
+    <None Include="Service References\WsDocumentos\configuration91.svcinfo" />
+    <None Include="Service References\WsDocumentos\configuration.svcinfo" />
+    <None Include="Service References\WsDocumentos\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSLUSNETConfig\Config.disco" />
+    <Content Include="Images\StatusAnimation.gif" />
+    <Content Include="Script\css jq ui\jquery.ui.datepicker-pt.js" />
+    <Content Include="Script\css jq ui\ui-lightness\images\animated-overlay.gif" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Script\css jq ui\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Script\css jq ui\ui-lightness\jquery-ui-1.10.4.custom.css" />
+    <Content Include="Script\css jq ui\ui-lightness\jquery-ui-1.10.4.custom.min.css" />
+    <Content Include="Script\Custom popUp\img\loader.gif" />
+    <Content Include="Script\Custom popUp\popUp.css" />
+    <Content Include="Script\Custom popUp\popUp.js" />
+    <Content Include="Script\Custom popUp\RRCustomPopup.css" />
+    <Content Include="Script\Custom popUp\RRCustomPopup.js" />
+    <Content Include="Script\GoogleAnalytics.js" />
+    <Content Include="Script\Helper.js" />
+    <Content Include="Script\jquery-1.8.3.js" />
+    <Content Include="Script\jquery-ui-1.10.4.custom.js" />
+    <Content Include="Script\Plugins.js" />
+    <Content Include="Script\Safari3AjaxHack.js" />
+    <Content Include="Script\Utility.js" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar.wsdl" />
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Ws_auxiliar\WSAuxiliar3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\WSLUSNETConfig\Config.wsdl" />
+    <None Include="Web References\WSLUSNETConfig\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Base.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Pages\Simulators.Master" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web.Dev.config">
+      <DependentUpon>Web.Base.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Prod.config">
+      <DependentUpon>Web.Base.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Qual.config">
+      <DependentUpon>Web.Base.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\PageLinks.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>PageLinks.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Strings.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Strings.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Themes\DefaultTheme\Calendar.css" />
+    <Content Include="App_Themes\DefaultTheme\Carousel.css" />
+    <Content Include="App_Themes\DefaultTheme\Images\BodyBackGround.png" />
+    <Content Include="App_Themes\DefaultTheme\Images\CarouselArrows.png" />
+    <Content Include="App_Themes\DefaultTheme\Images\CarouselNext.png" />
+    <Content Include="App_Themes\DefaultTheme\Images\CarouselNextHover.png" />
+    <Content Include="App_Themes\DefaultTheme\Images\CarouselPrevious.png" />
+    <Content Include="App_Themes\DefaultTheme\Images\CarouselPreviousHover.png" />
+    <Content Include="App_Themes\DefaultTheme\Styles.css" />
+    <Content Include="App_Themes\None\Dummy.css" />
+    <Content Include="Controls\AddressSearch.ascx" />
+    <Content Include="Controls\CommercialAccount.ascx" />
+    <Content Include="Controls\CreatedBy.ascx" />
+    <Content Include="Controls\DebugLoggedUserControl.ascx" />
+    <Content Include="Controls\Notes.ascx" />
+    <Content Include="Controls\ProposalUserDetails.ascx" />
+    <Content Include="Controls\QuotationDetails.ascx" />
+    <Content Include="Controls\SendToControl.ascx" />
+    <Content Include="Controls\SendToPopupControl.ascx" />
+    <Content Include="Controls\UserSuggestionsControl.ascx" />
+    <Content Include="Images\Calendar_16x16.png" />
+    <Content Include="Images\EditInformation_16x16.png" />
+    <Content Include="Images\Eps_Open_Large_16x16.png" />
+    <Content Include="Images\RemoveLine.gif" />
+    <Content Include="Images\User.png" />
+    <Content Include="Images\Zoom_16x16.png" />
+    <Content Include="Pages\Error.aspx" />
+    <Content Include="Script\Startup.js" />
+    <Content Include="Services\UserInterfaceService.asmx" />
+    <Content Include="Tests\WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://lusagq/WSLUSNET/Framework/Aplicacoes/Config.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WSLUSNETConfig\</RelPath>
+      <UpdateFromURL>http://lusagq/WSLUSNET/Framework/Aplicacoes/Config.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Lusitania_Simuladores_WebSite_WSLUSNETConfig_Config</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UserControlLinks.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UserControlLinks.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Images\loading.gif" />
+    <Content Include="BicicletasSimulator.aspx" />
+    <Content Include="Tests\AddressSearch.aspx" />
+    <Content Include="Tests\EncryptionTest.aspx" />
+    <Content Include="Tests\UserDetails.aspx" />
+    <Content Include="Tests\WebForm2.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Bicicletas.resx">
+      <SubType>Designer</SubType>
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Bicicletas.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="Controls\BicicletasPlan.ascx" />
+    <Content Include="Controls\BicicletasSendToPopupControl.ascx" />
+    <Content Include="Controls\ModeloColaborativo.ascx" />
+    <Content Include="Controls\QuotationResults.ascx" />
+    <Content Include="Pages\OutputES_PDF.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\DefaultTheme\FormDecorator.css" />
+    <Content Include="App_Themes\DefaultTheme\FormDecorator\ButtonSprites.gif" />
+    <Content Include="App_Themes\DefaultTheme\FormDecorator\CheckBoxSprites.gif" />
+    <Content Include="App_Themes\DefaultTheme\FormDecorator\ComboSprites.gif" />
+    <Content Include="App_Themes\DefaultTheme\FormDecorator\FieldsetBgr.png" />
+    <Content Include="App_Themes\DefaultTheme\FormDecorator\Office2007.gif" />
+    <Content Include="App_Themes\DefaultTheme\FormDecorator\RadioButtonSprites.gif" />
+    <Content Include="App_Themes\DefaultTheme\FormDecorator\RadioButtonSprites.png" />
+    <Content Include="App_Themes\DefaultTheme\Grid.Office2007.css" />
+    <Content Include="App_Themes\DefaultTheme\Grid\AddRecord.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\Cancel.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\Delete.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\Edit.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\Filter.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\MoveDown.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\MoveUp.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\Office2007.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\PagingFirst.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\PagingLast.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\PagingNext.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\PagingPrev.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\Refresh.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\SingleMinus.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\SinglePlus.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\SortAsc.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\SortDesc.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\sprite.gif" />
+    <Content Include="App_Themes\DefaultTheme\Grid\Update.gif" />
+    <Content Include="App_Themes\DefaultTheme\PanelBar.Web20.css" />
+    <Content Include="App_Themes\DefaultTheme\PanelBar\Expandable.png" />
+    <Content Include="App_Themes\DefaultTheme\PanelBar\RootItemBg.png" />
+    <Content Include="App_Themes\DefaultTheme\PanelBar\Web20.gif" />
+    <Content Include="Keys\Keys.xml" />
+    <Content Include="Script\lusAjax.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Hunter.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Hunter.Designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_Themes\DefaultTheme\bg_datepicker.png" />
+    <Content Include="App_Themes\DefaultTheme\Images\bg_datepicker.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Images\bg_container.gif" />
+    <Content Include="Images\bg_h3.jpg" />
+    <Content Include="Images\hide.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\show.gif" />
+    <Content Include="manut.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\OSBConnector\OSBConnector.csproj">
+      <Project>{ecea9a13-29f5-4118-97d0-4d4d9aaa4b56}</Project>
+      <Name>OSBConnector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{9E676CB9-0BAE-4BCD-867B-E18CC6049E55}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{31EDB8D2-4DAC-4FA7-99D1-A29CF0C88865}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web\Web.csproj">
+      <Project>{C2DC26FC-C7A5-4A47-B0AD-D3E13A4F85F6}</Project>
+      <Name>Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WsDocumentos\" />
+    <WCFMetadataStorage Include="Service References\WsPlanos\" />
+    <WCFMetadataStorage Include="Service References\Ws_auxiliar\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <Message Text="TRANSFORM" />
+    <TransformXml Source="Web.Base.Config" Transform="Web.$(Configuration).config" Destination="Web.config" StackTrace="true" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\build\MSBuild.Microsoft.VisualStudio.Web.targets.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\MSBuild.Microsoft.VisualStudio.Web.targets.14.0.0.3\build\MSBuild.Microsoft.VisualStudio.Web.targets.props'))" />
+  </Target>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v16.0\WebApplications\Microsoft.WebApplication.targets" />
+</Project>

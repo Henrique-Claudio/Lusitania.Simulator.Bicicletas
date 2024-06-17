@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Lusitania.Model.Portais.PortalMediador.Documentos" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Portais.PortalMediador.Documentos" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Lusitania.LusnetBase" />
+  <xs:complexType name="ArrayOfMlSegundaVia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MlSegundaVia" nillable="true" type="tns:MlSegundaVia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMlSegundaVia" nillable="true" type="tns:ArrayOfMlSegundaVia" />
+  <xs:complexType name="MlSegundaVia">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Lusitania.LusnetBase" base="q1:MlBaseOfMlSegundaViaYS0DbAY2">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Apolice" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataInicioRecibo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataTermoRecibo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Imprime2ViaCV" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Imprime2ViaRecibo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ImprimeOriginalCV" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ImprimeOriginalRecibo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NomeSegurado" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumeroCV" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Ramo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Recibo" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MlSegundaVia" nillable="true" type="tns:MlSegundaVia" />
+</xs:schema>

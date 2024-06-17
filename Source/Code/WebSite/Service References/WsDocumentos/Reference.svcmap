@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fa6255b2-463b-4381-900e-334a4b0f8ec8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WSDocumentos.wsdl" MetadataType="Wsdl" ID="c4fce396-30ef-4959-8be1-3eb6269f3218" SourceId="1" SourceUrl="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?wsdl" />
+    <MetadataFile FileName="WSDocumentos.xsd" MetadataType="Schema" ID="2699af6f-edeb-4f51-be86-3fb6f8c2f3f5" SourceId="1" SourceUrl="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?xsd=xsd3" />
+    <MetadataFile FileName="WSDocumentos.disco" MetadataType="Disco" ID="11c3e77b-0c24-4ef6-8890-7cb65d74cb3f" SourceId="1" SourceUrl="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?disco" />
+    <MetadataFile FileName="WSDocumentos1.xsd" MetadataType="Schema" ID="7ef49a33-569c-457e-b673-40348e1431a6" SourceId="1" SourceUrl="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?xsd=xsd1" />
+    <MetadataFile FileName="WSDocumentos2.xsd" MetadataType="Schema" ID="544f2558-11cd-4dc9-be27-6bd1c6382063" SourceId="1" SourceUrl="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?xsd=xsd2" />
+    <MetadataFile FileName="WSDocumentos3.xsd" MetadataType="Schema" ID="35f95c58-395a-45a6-b9b2-00b0b6ed8c47" SourceId="1" SourceUrl="https://servicebusq.lusitania.pt/GeralPortais/Servicos/WSDocumentos.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

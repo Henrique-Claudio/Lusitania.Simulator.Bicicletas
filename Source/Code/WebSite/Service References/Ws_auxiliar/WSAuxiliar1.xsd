@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Lusitania.Model.Simuladores.Negocio" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Simuladores.Negocio" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Lusitania.LusnetBase" />
+  <xs:complexType name="ArrayOfMlEnderecoCTT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MlEnderecoCTT" nillable="true" type="tns:MlEnderecoCTT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMlEnderecoCTT" nillable="true" type="tns:ArrayOfMlEnderecoCTT" />
+  <xs:complexType name="MlEnderecoCTT">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Lusitania.LusnetBase" base="q1:MlBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="pArteria" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pCp3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pCp4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pLocal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pLugar" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pRowid" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pTipoArt" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pTituloArt" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MlEnderecoCTT" nillable="true" type="tns:MlEnderecoCTT" />
+</xs:schema>

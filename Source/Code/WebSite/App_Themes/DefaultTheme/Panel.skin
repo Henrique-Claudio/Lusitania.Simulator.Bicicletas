@@ -1,0 +1,99 @@
+<asp:Panel runat="server" CssClass="Panel">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="AutoHeight" CssClass="autoHeight">
+</asp:Panel>
+
+
+<asp:Panel runat="server" SkinID="BodyColumn" CssClass="BodyColumn">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="VoyageHeader" CssClass="PanelHeader VoyagePanelHeader">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="PersonalCraftHeader" CssClass="PanelHeader PersonalCraftColor1">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="ChildrenProtectionPanelHeader" CssClass="PanelHeader ChildrenProtectionColor1">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="HomeHeader" CssClass="PanelHeader" BackColor="#FCB53F">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="GeneralHeader" CssClass="PanelHeader">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="Spacer" Height="10px">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="New_LeisureCraftPanelHeader_Blue" CssClass="PanelHeader New_Blue">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="New_LeisureCraftPanelHeader_Yellow" CssClass="PanelHeader New_Yellow">
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="Span" CssClass="Span">
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="OverflowPopup" Style="padding:12px 12px 12px 12px; display:none; background-repeat:repeat-x; overflow:scroll" Height="70%" Width="60%" BorderStyle="Solid" BorderColor="Black" BorderWidth="1" BackColor="White" >
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="Popup" Style="padding:12px 12px 12px 12px; display:none; background-repeat:repeat-x;" Width="740px"  >
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="PopupNEW" Style="padding:12px 12px 12px 12px; display:none;" Width="740px"  >
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="PopupAbsolute" Style="padding:12px 12px 12px 12px; display:none; background-repeat:repeat-x; margin-top:-650px;" Width="740px" BorderStyle="Solid" BorderColor="Black" BorderWidth="1" BackColor="White" >
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="Overlay" CssClass="Overlay">
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="TopRightOverlay" CssClass="TopRightOverlay">
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="WorkAccidentsHeader" CssClass="PanelHeader WorkAccidentsColor1" />
+
+<asp:Panel runat="server" SkinID="HousemaidHeader" CssClass="PanelHeader" BackColor="#5B8673" />
+
+<asp:Panel runat="server" SkinID="PersonalAccidents" CssClass="PanelHeader" BackColor="#746E74" />
+
+<asp:Panel runat="server" SkinID="FamilyPlanHeader" CssClass="PanelHeader" BackColor="#292C39" />
+
+<asp:Panel runat="server" SkinID="HealthHeader" CssClass="PanelHeader" BackColor="#3a6584" />
+
+<asp:Panel runat="server" SkinID="HunterPanelHeader" CssClass="PanelHeader" BackColor="#ffa000" />
+
+<asp:Panel runat="server" SkinID="CondominiumHeader" CssClass="PanelHeader" BackColor="#907663" />
+
+<asp:Panel runat="server" SkinID="ManagementHeader" CssClass="PanelHeader" BackColor="LightGray" />
+
+<asp:Panel runat="server" SkinID="ManagementHeaderSec" CssClass="PanelHeaderSec" BackColor="LightGray" />
+
+<asp:Panel runat="Server" SkinID="ManagementSubHeader" CssClass="PanelHeader" BackColor="#4e4333"></asp:Panel>
+
+<asp:Panel runat="server" SkinID="FamilyPlanInsuranceBlockContainer"
+    BorderStyle="Solid"
+    BorderWidth="1"
+    BorderColor="#000033"
+    Width="100px"
+>
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="FamilyPlanInsuranceBlockHeader"
+    BackColor="#292C39"
+    Height="30px"
+>
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="FamilyPlanInsuranceBlockContent"
+    Height="50px"
+>
+</asp:Panel>
+
+<asp:Panel runat="server" SkinID="proposal_panel" cssClass="proposal_panel_class" >
+</asp:Panel>
+
+<asp:Panel runat="Server" SkinID="Popupv6" Style=" position: fixed; top:0px; padding:12px 12px 12px 12px; display:none; background-repeat:repeat-x;" Width="740px" BorderStyle="Solid" BorderColor="Black" BorderWidth="1" BackColor="White"   CssClass="popup_custom"   >
+</asp:Panel>

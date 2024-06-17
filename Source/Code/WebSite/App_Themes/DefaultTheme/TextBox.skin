@@ -1,0 +1,20 @@
+<asp:TextBox runat="server" CssClass="Box">
+</asp:TextBox>
+
+<asp:TextBox runat="server" SkinID="Disabled" CssClass="Box" BackColor="Silver">
+</asp:TextBox>
+
+<asp:TextBox runat="server" SkinID="Date" CssClass="Box DateBox"></asp:TextBox>
+
+<asp:TextBox runat="server" SkinID="Cash" CssClass="Box CashBox"></asp:TextBox>
+
+<asp:TextBox runat="server" SkinID="ZipCode" CssClass="Box ZipCodeBox"></asp:TextBox>
+<asp:TextBox runat="server" SkinID="ZipCode4" CssClass="Box" Width="25"></asp:TextBox>
+<asp:TextBox runat="server" SkinID="ZipCode3" CssClass="Box" Width="20"></asp:TextBox>
+<asp:TextBox runat="Server" SkinID="Year" CssClass="Box" Width="25"></asp:TextBox>
+<asp:TextBox runat="Server" SkinID="Age" CssClass="Box" Width="20"></asp:TextBox>
+<asp:TextBox runat="server" SkinID="Nif" CssClass="Box" Width="60"></asp:TextBox>
+
+<asp:TextBox runat="server" SkinID="CaixaInput" CssClass="CaixaInput"></asp:TextBox>
+
+<asp:TextBox runat="server" SkinID="CaixaTexto" CssClass="CaixaTexto"></asp:TextBox>

@@ -1,0 +1,5 @@
+<ajax:FilteredTextBoxExtender runat="server" SkinID="NumbersOnly" FilterType="Numbers"></ajax:FilteredTextBoxExtender>
+
+<ajax:FilteredTextBoxExtender runat="server" SkinID="NumbersCommasAndDots" FilterType="Custom" FilterMode="ValidChars" ValidChars="1234567890,."></ajax:FilteredTextBoxExtender>
+
+<ajax:FilteredTextBoxExtender runat="server" SkinID="Date" FilterType="Custom" FilterMode="ValidChars" ValidChars="1234567890-/"></ajax:FilteredTextBoxExtender>

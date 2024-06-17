@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSAuxiliar" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IWSAuxiliar_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Auxiliar" />
+      <xsd:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Simuladores.Negocio" />
+      <xsd:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Lusitania.LusnetBase" />
+      <xsd:import schemaLocation="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Lusitania.Model.Entidades.Classes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWSAuxiliar_GetTipoRecibos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoRecibos" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetTipoRecibos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTipoRecibosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetAmbitoRecibos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmbitoRecibos" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetAmbitoRecibos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAmbitoRecibosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetMotivosDevolucao_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotivosDevolucao" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetMotivosDevolucao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMotivosDevolucaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetSituacoesRecibos_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSituacoesRecibos" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetSituacoesRecibos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSituacoesRecibosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetEnderecosCTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnderecosCTT" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetEnderecosCTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEnderecosCTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_ValidarMediador_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarMediador" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_ValidarMediador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidarMediadorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_UpdatePiDadosInstitucional_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePiDadosInstitucional" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_UpdatePiDadosInstitucional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePiDadosInstitucionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Get_Xml_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_Xml" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Get_Xml_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_XmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Le_Xml_Aviso_InputMessage">
+    <wsdl:part name="parameters" element="tns:Le_Xml_Aviso" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Le_Xml_Aviso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Le_Xml_AvisoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Le_Xml_PP_InputMessage">
+    <wsdl:part name="parameters" element="tns:Le_Xml_PP" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Le_Xml_PP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Le_Xml_PPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Desce_Recibo_InputMessage">
+    <wsdl:part name="parameters" element="tns:Desce_Recibo" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Desce_Recibo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Desce_ReciboResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Valida_ListaNegra_Nif_InputMessage">
+    <wsdl:part name="parameters" element="tns:Valida_ListaNegra_Nif" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_Valida_ListaNegra_Nif_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Valida_ListaNegra_NifResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_EncodeUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:EncodeUsername" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_EncodeUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EncodeUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_DecodeUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:DecodeUsername" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_DecodeUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DecodeUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetContaComercial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContaComercial" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetContaComercial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContaComercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_ValidateContaComercial_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateContaComercial" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_ValidateContaComercial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateContaComercialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_InsereComentario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsereComentario" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_InsereComentario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsereComentarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterEscaloesRendimento_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterEscaloesRendimento" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterEscaloesRendimento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterEscaloesRendimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterTipologiasHabitacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterTipologiasHabitacao" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterTipologiasHabitacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterTipologiasHabitacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterUsufrutoHabitacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterUsufrutoHabitacao" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterUsufrutoHabitacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterUsufrutoHabitacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterHorarioContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterHorarioContacto" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterHorarioContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterHorarioContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_validarNIF_InputMessage">
+    <wsdl:part name="parameters" element="tns:validarNIF" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_validarNIF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validarNIFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterEnderecosCTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterEnderecosCTT" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterEnderecosCTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterEnderecosCTTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_validarAnulacoesRecentes_InputMessage">
+    <wsdl:part name="parameters" element="tns:validarAnulacoesRecentes" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_validarAnulacoesRecentes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validarAnulacoesRecentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_insereOutputDocUpload_InputMessage">
+    <wsdl:part name="parameters" element="tns:insereOutputDocUpload" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_insereOutputDocUpload_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insereOutputDocUploadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_validarIBANObterBIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:validarIBANObterBIC" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_validarIBANObterBIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validarIBANObterBICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetActividadesEconomicas_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActividadesEconomicas" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetActividadesEconomicas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActividadesEconomicasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetValoresSalario_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValoresSalario" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetValoresSalario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValoresSalarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesSexo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesSexo" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesSexo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesSexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesEstadoCivil_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesEstadoCivil" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesEstadoCivil_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesEstadoCivilResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesProfissoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesProfissoes" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesProfissoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesProfissoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesNacionalidades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesNacionalidades" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesNacionalidades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesNacionalidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesActividadesProfissionais_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesActividadesProfissionais" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesActividadesProfissionais_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesActividadesProfissionaisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesTitulosNome_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesTitulosNome" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesTitulosNome_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesTitulosNomeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesPaises_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesPaises" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesPaises_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesPaisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetCredoresHipotecarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredoresHipotecarios" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetCredoresHipotecarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCredoresHipotecariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesParentesco_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesParentesco" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesParentesco_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesParentescoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesModalidades_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesModalidades" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesModalidades_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesModalidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesFacturacaoAnual_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesFacturacaoAnual" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesFacturacaoAnual_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesFacturacaoAnualResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesFuncao_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesFuncao" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesFuncao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesFuncaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesHabilitacao_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesHabilitacao" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesHabilitacao_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesHabilitacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterTodasHabilitacoes_InputMessage">
+    <wsdl:part name="parameters" element="tns:obterTodasHabilitacoes" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_obterTodasHabilitacoes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:obterTodasHabilitacoesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesMeioContacto_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesMeioContacto" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesMeioContacto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesMeioContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesNumeroAutomoveis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesNumeroAutomoveis" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesNumeroAutomoveis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesNumeroAutomoveisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesNumeroFuncionarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesNumeroFuncionarios" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesNumeroFuncionarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesNumeroFuncionariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesSituacaoProfissional_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesSituacaoProfissional" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetOpcoesSituacaoProfissional_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOpcoesSituacaoProfissionalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetDataInicio_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataInicio" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetDataInicio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataInicioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetDataMaxima_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataMaxima" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetDataMaxima_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataMaximaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetValorSistema_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValorSistema" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetValorSistema_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValorSistemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_SaberMeses_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaberMeses" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_SaberMeses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaberMesesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetListQuestoesSimulador_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListQuestoesSimulador" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetListQuestoesSimulador_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListQuestoesSimuladorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetPessoa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPessoa" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetPessoa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPessoaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetEstadosAlerta_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstadosAlerta" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetEstadosAlerta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEstadosAlertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetSituacoesApolice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSituacoesApolice" />
+  </wsdl:message>
+  <wsdl:message name="IWSAuxiliar_GetSituacoesApolice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSituacoesApoliceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWSAuxiliar">
+    <wsdl:operation name="GetTipoRecibos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetTipoRecibos" message="tns:IWSAuxiliar_GetTipoRecibos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetTipoRecibosResponse" message="tns:IWSAuxiliar_GetTipoRecibos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbitoRecibos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetAmbitoRecibos" message="tns:IWSAuxiliar_GetAmbitoRecibos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetAmbitoRecibosResponse" message="tns:IWSAuxiliar_GetAmbitoRecibos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMotivosDevolucao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetMotivosDevolucao" message="tns:IWSAuxiliar_GetMotivosDevolucao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetMotivosDevolucaoResponse" message="tns:IWSAuxiliar_GetMotivosDevolucao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSituacoesRecibos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetSituacoesRecibos" message="tns:IWSAuxiliar_GetSituacoesRecibos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetSituacoesRecibosResponse" message="tns:IWSAuxiliar_GetSituacoesRecibos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnderecosCTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetEnderecosCTT" message="tns:IWSAuxiliar_GetEnderecosCTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetEnderecosCTTResponse" message="tns:IWSAuxiliar_GetEnderecosCTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMediador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/ValidarMediador" message="tns:IWSAuxiliar_ValidarMediador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/ValidarMediadorResponse" message="tns:IWSAuxiliar_ValidarMediador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePiDadosInstitucional">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/UpdatePiDadosInstitucional" message="tns:IWSAuxiliar_UpdatePiDadosInstitucional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/UpdatePiDadosInstitucionalResponse" message="tns:IWSAuxiliar_UpdatePiDadosInstitucional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Xml">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/Get_Xml" message="tns:IWSAuxiliar_Get_Xml_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/Get_XmlResponse" message="tns:IWSAuxiliar_Get_Xml_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Le_Xml_Aviso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/Le_Xml_Aviso" message="tns:IWSAuxiliar_Le_Xml_Aviso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/Le_Xml_AvisoResponse" message="tns:IWSAuxiliar_Le_Xml_Aviso_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Le_Xml_PP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/Le_Xml_PP" message="tns:IWSAuxiliar_Le_Xml_PP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/Le_Xml_PPResponse" message="tns:IWSAuxiliar_Le_Xml_PP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Desce_Recibo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/Desce_Recibo" message="tns:IWSAuxiliar_Desce_Recibo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/Desce_ReciboResponse" message="tns:IWSAuxiliar_Desce_Recibo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Valida_ListaNegra_Nif">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/Valida_ListaNegra_Nif" message="tns:IWSAuxiliar_Valida_ListaNegra_Nif_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/Valida_ListaNegra_NifResponse" message="tns:IWSAuxiliar_Valida_ListaNegra_Nif_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EncodeUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/EncodeUsername" message="tns:IWSAuxiliar_EncodeUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/EncodeUsernameResponse" message="tns:IWSAuxiliar_EncodeUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DecodeUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/DecodeUsername" message="tns:IWSAuxiliar_DecodeUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/DecodeUsernameResponse" message="tns:IWSAuxiliar_DecodeUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContaComercial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetContaComercial" message="tns:IWSAuxiliar_GetContaComercial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetContaComercialResponse" message="tns:IWSAuxiliar_GetContaComercial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateContaComercial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/ValidateContaComercial" message="tns:IWSAuxiliar_ValidateContaComercial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/ValidateContaComercialResponse" message="tns:IWSAuxiliar_ValidateContaComercial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsereComentario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/InsereComentario" message="tns:IWSAuxiliar_InsereComentario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/InsereComentarioResponse" message="tns:IWSAuxiliar_InsereComentario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obterEscaloesRendimento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/obterEscaloesRendimento" message="tns:IWSAuxiliar_obterEscaloesRendimento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/obterEscaloesRendimentoResponse" message="tns:IWSAuxiliar_obterEscaloesRendimento_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obterTipologiasHabitacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/obterTipologiasHabitacao" message="tns:IWSAuxiliar_obterTipologiasHabitacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/obterTipologiasHabitacaoResponse" message="tns:IWSAuxiliar_obterTipologiasHabitacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obterUsufrutoHabitacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/obterUsufrutoHabitacao" message="tns:IWSAuxiliar_obterUsufrutoHabitacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/obterUsufrutoHabitacaoResponse" message="tns:IWSAuxiliar_obterUsufrutoHabitacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obterHorarioContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/obterHorarioContacto" message="tns:IWSAuxiliar_obterHorarioContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/obterHorarioContactoResponse" message="tns:IWSAuxiliar_obterHorarioContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validarNIF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/validarNIF" message="tns:IWSAuxiliar_validarNIF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/validarNIFResponse" message="tns:IWSAuxiliar_validarNIF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obterEnderecosCTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/obterEnderecosCTT" message="tns:IWSAuxiliar_obterEnderecosCTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/obterEnderecosCTTResponse" message="tns:IWSAuxiliar_obterEnderecosCTT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validarAnulacoesRecentes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/validarAnulacoesRecentes" message="tns:IWSAuxiliar_validarAnulacoesRecentes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/validarAnulacoesRecentesResponse" message="tns:IWSAuxiliar_validarAnulacoesRecentes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insereOutputDocUpload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/insereOutputDocUpload" message="tns:IWSAuxiliar_insereOutputDocUpload_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/insereOutputDocUploadResponse" message="tns:IWSAuxiliar_insereOutputDocUpload_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validarIBANObterBIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/validarIBANObterBIC" message="tns:IWSAuxiliar_validarIBANObterBIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/validarIBANObterBICResponse" message="tns:IWSAuxiliar_validarIBANObterBIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActividadesEconomicas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetActividadesEconomicas" message="tns:IWSAuxiliar_GetActividadesEconomicas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetActividadesEconomicasResponse" message="tns:IWSAuxiliar_GetActividadesEconomicas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValoresSalario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetValoresSalario" message="tns:IWSAuxiliar_GetValoresSalario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetValoresSalarioResponse" message="tns:IWSAuxiliar_GetValoresSalario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesSexo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesSexo" message="tns:IWSAuxiliar_GetOpcoesSexo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesSexoResponse" message="tns:IWSAuxiliar_GetOpcoesSexo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesEstadoCivil">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesEstadoCivil" message="tns:IWSAuxiliar_GetOpcoesEstadoCivil_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesEstadoCivilResponse" message="tns:IWSAuxiliar_GetOpcoesEstadoCivil_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesProfissoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesProfissoes" message="tns:IWSAuxiliar_GetOpcoesProfissoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesProfissoesResponse" message="tns:IWSAuxiliar_GetOpcoesProfissoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesNacionalidades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesNacionalidades" message="tns:IWSAuxiliar_GetOpcoesNacionalidades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesNacionalidadesResponse" message="tns:IWSAuxiliar_GetOpcoesNacionalidades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesActividadesProfissionais">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesActividadesProfissionais" message="tns:IWSAuxiliar_GetOpcoesActividadesProfissionais_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesActividadesProfissionaisResponse" message="tns:IWSAuxiliar_GetOpcoesActividadesProfissionais_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesTitulosNome">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesTitulosNome" message="tns:IWSAuxiliar_GetOpcoesTitulosNome_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesTitulosNomeResponse" message="tns:IWSAuxiliar_GetOpcoesTitulosNome_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesPaises">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesPaises" message="tns:IWSAuxiliar_GetOpcoesPaises_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesPaisesResponse" message="tns:IWSAuxiliar_GetOpcoesPaises_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCredoresHipotecarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetCredoresHipotecarios" message="tns:IWSAuxiliar_GetCredoresHipotecarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetCredoresHipotecariosResponse" message="tns:IWSAuxiliar_GetCredoresHipotecarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesParentesco">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesParentesco" message="tns:IWSAuxiliar_GetOpcoesParentesco_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesParentescoResponse" message="tns:IWSAuxiliar_GetOpcoesParentesco_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesModalidades">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesModalidades" message="tns:IWSAuxiliar_GetOpcoesModalidades_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesModalidadesResponse" message="tns:IWSAuxiliar_GetOpcoesModalidades_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesFacturacaoAnual">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesFacturacaoAnual" message="tns:IWSAuxiliar_GetOpcoesFacturacaoAnual_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesFacturacaoAnualResponse" message="tns:IWSAuxiliar_GetOpcoesFacturacaoAnual_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesFuncao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesFuncao" message="tns:IWSAuxiliar_GetOpcoesFuncao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesFuncaoResponse" message="tns:IWSAuxiliar_GetOpcoesFuncao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesHabilitacao">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesHabilitacao" message="tns:IWSAuxiliar_GetOpcoesHabilitacao_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesHabilitacaoResponse" message="tns:IWSAuxiliar_GetOpcoesHabilitacao_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="obterTodasHabilitacoes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/obterTodasHabilitacoes" message="tns:IWSAuxiliar_obterTodasHabilitacoes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/obterTodasHabilitacoesResponse" message="tns:IWSAuxiliar_obterTodasHabilitacoes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesMeioContacto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesMeioContacto" message="tns:IWSAuxiliar_GetOpcoesMeioContacto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesMeioContactoResponse" message="tns:IWSAuxiliar_GetOpcoesMeioContacto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesNumeroAutomoveis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesNumeroAutomoveis" message="tns:IWSAuxiliar_GetOpcoesNumeroAutomoveis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesNumeroAutomoveisResponse" message="tns:IWSAuxiliar_GetOpcoesNumeroAutomoveis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesNumeroFuncionarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesNumeroFuncionarios" message="tns:IWSAuxiliar_GetOpcoesNumeroFuncionarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesNumeroFuncionariosResponse" message="tns:IWSAuxiliar_GetOpcoesNumeroFuncionarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesSituacaoProfissional">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesSituacaoProfissional" message="tns:IWSAuxiliar_GetOpcoesSituacaoProfissional_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetOpcoesSituacaoProfissionalResponse" message="tns:IWSAuxiliar_GetOpcoesSituacaoProfissional_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInicio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetDataInicio" message="tns:IWSAuxiliar_GetDataInicio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetDataInicioResponse" message="tns:IWSAuxiliar_GetDataInicio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataMaxima">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetDataMaxima" message="tns:IWSAuxiliar_GetDataMaxima_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetDataMaximaResponse" message="tns:IWSAuxiliar_GetDataMaxima_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValorSistema">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetValorSistema" message="tns:IWSAuxiliar_GetValorSistema_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetValorSistemaResponse" message="tns:IWSAuxiliar_GetValorSistema_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaberMeses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/SaberMeses" message="tns:IWSAuxiliar_SaberMeses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/SaberMesesResponse" message="tns:IWSAuxiliar_SaberMeses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListQuestoesSimulador">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetListQuestoesSimulador" message="tns:IWSAuxiliar_GetListQuestoesSimulador_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetListQuestoesSimuladorResponse" message="tns:IWSAuxiliar_GetListQuestoesSimulador_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPessoa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetPessoa" message="tns:IWSAuxiliar_GetPessoa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetPessoaResponse" message="tns:IWSAuxiliar_GetPessoa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEstadosAlerta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetEstadosAlerta" message="tns:IWSAuxiliar_GetEstadosAlerta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetEstadosAlertaResponse" message="tns:IWSAuxiliar_GetEstadosAlerta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSituacoesApolice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSAuxiliar/GetSituacoesApolice" message="tns:IWSAuxiliar_GetSituacoesApolice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSAuxiliar/GetSituacoesApoliceResponse" message="tns:IWSAuxiliar_GetSituacoesApolice_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IWSAuxiliar" type="tns:IWSAuxiliar">
+    <wsp:PolicyReference URI="#WSHttpBinding_IWSAuxiliar_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetTipoRecibos">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetTipoRecibos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAmbitoRecibos">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetAmbitoRecibos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMotivosDevolucao">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetMotivosDevolucao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSituacoesRecibos">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetSituacoesRecibos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnderecosCTT">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetEnderecosCTT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidarMediador">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/ValidarMediador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePiDadosInstitucional">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/UpdatePiDadosInstitucional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Xml">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/Get_Xml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Le_Xml_Aviso">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/Le_Xml_Aviso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Le_Xml_PP">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/Le_Xml_PP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Desce_Recibo">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/Desce_Recibo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Valida_ListaNegra_Nif">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/Valida_ListaNegra_Nif" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeUsername">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/EncodeUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DecodeUsername">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/DecodeUsername" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContaComercial">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetContaComercial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateContaComercial">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/ValidateContaComercial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsereComentario">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/InsereComentario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterEscaloesRendimento">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/obterEscaloesRendimento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterTipologiasHabitacao">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/obterTipologiasHabitacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterUsufrutoHabitacao">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/obterUsufrutoHabitacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterHorarioContacto">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/obterHorarioContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarNIF">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/validarNIF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterEnderecosCTT">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/obterEnderecosCTT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarAnulacoesRecentes">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/validarAnulacoesRecentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insereOutputDocUpload">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/insereOutputDocUpload" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validarIBANObterBIC">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/validarIBANObterBIC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActividadesEconomicas">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetActividadesEconomicas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValoresSalario">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetValoresSalario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesSexo">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesSexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesEstadoCivil">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesEstadoCivil" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesProfissoes">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesProfissoes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesNacionalidades">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesNacionalidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesActividadesProfissionais">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesActividadesProfissionais" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesTitulosNome">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesTitulosNome" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesPaises">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesPaises" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCredoresHipotecarios">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetCredoresHipotecarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesParentesco">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesParentesco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesModalidades">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesModalidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesFacturacaoAnual">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesFacturacaoAnual" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesFuncao">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesFuncao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesHabilitacao">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesHabilitacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="obterTodasHabilitacoes">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/obterTodasHabilitacoes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesMeioContacto">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesMeioContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesNumeroAutomoveis">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesNumeroAutomoveis" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesNumeroFuncionarios">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesNumeroFuncionarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOpcoesSituacaoProfissional">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetOpcoesSituacaoProfissional" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataInicio">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetDataInicio" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDataMaxima">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetDataMaxima" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValorSistema">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetValorSistema" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaberMeses">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/SaberMeses" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListQuestoesSimulador">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetListQuestoesSimulador" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPessoa">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetPessoa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEstadosAlerta">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetEstadosAlerta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSituacoesApolice">
+      <soap12:operation soapAction="http://tempuri.org/IWSAuxiliar/GetSituacoesApolice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSAuxiliar">
+    <wsdl:port name="WSHttpBinding_IWSAuxiliar" binding="tns:WSHttpBinding_IWSAuxiliar">
+      <soap12:address location="https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://dev_appfabric/Auxiliar/Servicos/WSAuxiliar.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/DEV_APPFABRIC.lusitania-cs.pt</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

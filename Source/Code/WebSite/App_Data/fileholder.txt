@@ -1,0 +1,1 @@
+﻿Este ficheiro só existe para que seja publicado o directorio app_data.

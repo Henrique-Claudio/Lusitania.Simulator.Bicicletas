@@ -1,0 +1,3 @@
+<asp:RadioButton runat="server" CssClass="Box" />
+
+<asp:RadioButton runat="server" SkinID="Spaced" CssClass="RadioButtonSpaced" />

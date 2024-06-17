@@ -1,0 +1,35 @@
+<asp:ImageButton runat="server" SkinID="Calendar" ImageUrl="~/Images/Calendar_16x16.png" ImageAlign="AbsMiddle" />
+
+<asp:ImageButton runat="Server" SkinID="ChooseItem" ImageUrl="~/Images/FormRun_16x16.png" />
+
+<asp:ImageButton runat="server" SkinID="AddItem" ImageUrl="~/Images/AddLine.gif" />
+
+<asp:ImageButton runat="server" SkinID="RemoveItem" ImageUrl="~/Images/RemoveLine.gif" />
+
+<asp:ImageButton runat="Server" SkinID="ActualSize" ImageUrl="~/Images/ActualSize_16x16.png" />
+
+<asp:ImageButton runat="server" SkinID="EditInformation" ImageUrl="~/Images/EditInformation_16x16.png" />
+
+<asp:ImageButton runat="Server" SkinID="Envelope" ImageUrl="~/Images/Eps_Open_Large_16x16.png" />
+
+<asp:ImageButton runat="Server" SkinID="Contract" ImageUrl="~/Images/Organizer_16x16.png" />
+
+<asp:ImageButton runat="server" SkinID="User" ImageUrl="~/Images/User.png" />
+
+<asp:ImageButton runat="server" SkinID="Zoom" ImageUrl="~/Images/Zoom_16x16.png" />
+
+<asp:ImageButton runat="server" SkinID="Print" ImageUrl="~/Images/Printer_Old_16x16.gif" />
+
+<asp:ImageButton runat="server" SkinID="Printed" ImageUrl="~/Images/Printer_Check_Old_16x16.gif" />
+
+<asp:ImageButton runat="server" SkinID="Sync" ImageUrl="~/Images/SychronizeList_16x16.png" />
+
+<asp:ImageButton runat="server" SkinID="NavForward" ImageUrl="~/Images/NavForward_16x16.png" />
+
+<asp:ImageButton runat="server" SkinID="FamilyPlanAddButton" CssClass="FamilyPlanAddButton" />
+
+<asp:ImageButton runat="server" SkinID="AddGeneric" ImageUrl="~/Images/Add_16x16.png" />
+
+<asp:ImageButton runat="Server" SkinID="InAcceptance" ImageUrl="~/Images/Warning_16x16.png" />
+
+<asp:ImageButton runat="Server" SkinID="ToAskForAcceptance" ImageUrl="~/Images/Acceptance_16x16.png" />
